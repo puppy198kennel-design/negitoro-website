@@ -475,20 +475,24 @@ a.about-card:focus {
     }
 }
 
-/* ===== Homepage Logo Intro Animation ===== */
+/* ===== Homepage Logo Intro ===== */
 
 #logo-intro {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw !important;
+    height: 100vh !important;
 
-    background: var(--navy);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    background: #263b50;
+    z-index: 999999;
     pointer-events: none;
 
     animation: introFade 2s ease forwards;
