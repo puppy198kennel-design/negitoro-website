@@ -614,43 +614,51 @@ a.about-card:focus {
 }
 
 /* =================================
-   Negitoro Opening Animation
+   Negitoro Opening Animation FIX
 ================================= */
 
 #logo-intro {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    background: #f7f1e5;
+    background: #f7f1e5 !important;
+
+    z-index: 99999 !important;
 
     opacity: 1;
     visibility: visible;
 
-    animation: logoIntroFade 1.2s ease 2s forwards;
     pointer-events: none;
+
+    animation: negitoroOpeningFade 1.5s ease-in 2s forwards !important;
 }
 
 #logo-intro img {
-    width: 65px;
-    height: 65px;
+    display: block !important;
+    width: 65px !important;
+    height: 65px !important;
     object-fit: contain;
-
-    display: block;
 }
 
-/* 2秒後にゆっくり消える */
-@keyframes logoIntroFade {
-    from {
+@keyframes negitoroOpeningFade {
+    0% {
         opacity: 1;
         visibility: visible;
     }
 
-    to {
+    99% {
+        opacity: 0;
+        visibility: visible;
+    }
+
+    100% {
         opacity: 0;
         visibility: hidden;
     }
