@@ -663,6 +663,109 @@ a.about-card:focus {
         visibility: hidden;
     }
 }
+/* =================================
+   Negitoro Image Lightbox
+================================= */
+
+.servers-section .server-card img {
+    cursor: zoom-in;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.servers-section .server-card img:hover {
+    filter: brightness(0.9);
+}
+
+/* Lightbox Background */
+
+#image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(15, 23, 38, 0.92);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Open */
+
+#image-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Enlarged Image */
+
+#image-lightbox img {
+    max-width: 90vw;
+    max-height: 85vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+}
+
+#image-lightbox.active img {
+    transform: scale(1);
+}
+
+/* Close Button */
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+
+    font-size: 30px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#lightbox-close:hover {
+    background: var(--red);
+    transform: rotate(90deg);
+}
+
+@media (max-width: 600px) {
+    #image-lightbox {
+        padding: 15px;
+    }
+
+    #lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+}
 
 .servers-bottom .main-button {
     display: inline-block;
