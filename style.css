@@ -637,7 +637,7 @@ a.about-card:focus {
 
     pointer-events: none;
 
-    animation: negitoroOpeningFade 0.8s ease-in 2s forwards !important;
+    animation: negitoroOpeningFade 0.8s ease-in 1s forwards !important;
 }
 
 #logo-intro img {
