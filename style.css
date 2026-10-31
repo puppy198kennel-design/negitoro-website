@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
 :root {
@@ -572,12 +573,19 @@ a.about-card:focus {
 .servers-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
     gap: 28px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Card */
+
 .server-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
     background: #fffaf0;
     border: 1px solid #e7dcc8;
     border-radius: 8px;
@@ -590,14 +598,24 @@ a.about-card:focus {
     box-shadow: 0 12px 28px rgba(38, 59, 80, 0.12);
 }
 
+/* Image */
+
 .server-card img {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
+    height: auto;
     object-fit: cover;
-    display: block;
+    object-position: center;
+    flex-shrink: 0;
 }
 
+/* Card Text */
+
 .server-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 24px;
     text-align: left;
 }
@@ -616,14 +634,18 @@ a.about-card:focus {
 }
 
 .server-card p {
+    flex: 1;
     color: #68645d;
     line-height: 1.8;
     font-size: 14px;
     margin: 0;
 }
 
+/* Status Label */
+
 .server-status {
     display: inline-block;
+    align-self: flex-start;
     margin-top: 15px;
     padding: 6px 12px;
     background: #f2e5cb;
@@ -658,12 +680,14 @@ a.about-card:focus {
 @media (max-width: 900px) {
     .servers-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
     }
 }
 
 @media (max-width: 600px) {
     .servers-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .servers-hero {
@@ -672,5 +696,9 @@ a.about-card:focus {
 
     .servers-bottom h2 {
         font-size: 24px;
+    }
+
+    .server-card-content {
+        padding: 22px;
     }
 }
