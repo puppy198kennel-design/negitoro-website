@@ -536,6 +536,7 @@ a.about-card:focus {
     }
 }
 
+
 /* =================================
    Servers Page
 ================================= */
@@ -579,7 +580,7 @@ a.about-card:focus {
     margin: 0 auto;
 }
 
-/* Card */
+/* ===== Server Card ===== */
 
 .server-card {
     display: flex;
@@ -598,19 +599,20 @@ a.about-card:focus {
     box-shadow: 0 12px 28px rgba(38, 59, 80, 0.12);
 }
 
-/* Image */
+/* ===== Server Image ===== */
 
 .server-card img {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
+    height: 190px;
+    min-height: 190px;
+    max-height: 190px;
     object-fit: cover;
     object-position: center;
     flex-shrink: 0;
 }
 
-/* Card Text */
+/* ===== Server Text ===== */
 
 .server-card-content {
     display: flex;
@@ -621,10 +623,12 @@ a.about-card:focus {
 }
 
 .server-number {
+    display: block;
     color: var(--red);
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1.5px;
+    margin-bottom: 5px;
 }
 
 .server-card h2 {
@@ -641,7 +645,7 @@ a.about-card:focus {
     margin: 0;
 }
 
-/* Status Label */
+/* ===== Server Status ===== */
 
 .server-status {
     display: inline-block;
@@ -682,6 +686,12 @@ a.about-card:focus {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 22px;
     }
+
+    .server-card img {
+        height: 180px;
+        min-height: 180px;
+        max-height: 180px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -696,6 +706,13 @@ a.about-card:focus {
 
     .servers-bottom h2 {
         font-size: 24px;
+    }
+
+    .server-card img {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 16 / 9;
     }
 
     .server-card-content {
