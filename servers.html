@@ -111,6 +111,52 @@
     <h3>🍣 Negitoro Server</h3>
     <p>© 2026 Negitoro Server</p>
 </footer>
+    <!-- Image Lightbox -->
+<div id="image-lightbox">
+    <button id="lightbox-close" aria-label="閉じる">&times;</button>
+    <img src="" alt="拡大画像">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("image-lightbox");
+    const lightboxImage = lightbox.querySelector("img");
+    const closeButton = document.getElementById("lightbox-close");
+
+    const images = document.querySelectorAll(
+        ".servers-section .server-card img"
+    );
+
+    function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    images.forEach(image => {
+        image.addEventListener("click", () => {
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+});
+</script>
 
 </body>
 </html>
