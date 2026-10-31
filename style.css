@@ -617,13 +617,3 @@ a.about-card:focus {
     display: inline-block;
     margin: 0 auto;
 }
-
-/* ===== Remove the unwanted extra logo intro ===== */
-/* Keep the normal logo inside .header visible. */
-#logo-intro {
-    display: none !important;
-}
-
-#logo-intro img {
-    display: none !important;
-}
