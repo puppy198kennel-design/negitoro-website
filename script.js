@@ -1,8 +1,8 @@
+// ========================================
+// Negitoro Server - Script
+// ========================================
 
-// =================================
-// Negitoro Server - Copy Address
-// =================================
-
+// サーバーアドレスコピー機能
 const copyButton = document.getElementById("copyButton");
 const serverAddress = document.getElementById("serverAddress");
 
@@ -17,11 +17,13 @@ if (copyButton && serverAddress) {
 
         try {
             await navigator.clipboard.writeText(address);
+
             copyButton.textContent = "コピーしました！";
 
             setTimeout(() => {
                 copyButton.textContent = "コピー";
             }, 2000);
+
         } catch {
             alert("コピーできませんでした。");
         }
@@ -29,79 +31,99 @@ if (copyButton && serverAddress) {
 }
 
 
-// =================================
-// Negitoro Server - Online Status
-// =================================
+// ========================================
+// サーバーオンライン状況取得機能
+// ========================================
 
-const statusElements = {
-    status: document.getElementById("onlineStatus"),
-    online: document.getElementById("onlinePlayers"),
-    max: document.getElementById("maxPlayers"),
-    bar: document.getElementById("statusBarFill"),
-    message: document.getElementById("statusMessage")
-};
+const STATUS_API_URL =
+    "https://api.mcstatus.io/v2/status/java/nicely-doses.tun.ply.gg";
 
-const API_URL =
-    "https://api.mcstatus.io/v2/status/java/nicely-doses.tun.ply.gg?query=false";
+const statusLabel = document.getElementById("serverStatus");
+const playerCount = document.getElementById("playerCount");
+const playerMax = document.getElementById("playerMax");
+const statusMessage = document.getElementById("statusMessage");
+const statusBarFill = document.getElementById("statusBarFill");
+const statusLastUpdated = document.getElementById("statusLastUpdated");
 
 async function updateServerStatus() {
-    // HTMLに表示欄がなければ何もしない
-    if (Object.values(statusElements).some(element => !element)) {
+
+    if (
+        !statusLabel ||
+        !playerCount ||
+        !playerMax ||
+        !statusMessage ||
+        !statusBarFill
+    ) {
         return;
     }
 
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(STATUS_API_URL, {
+            cache: "no-store"
+        });
 
         if (!response.ok) {
-            throw new Error("API request failed");
+            throw new Error("API connection failed");
         }
 
         const data = await response.json();
 
-        if (data.online !== true) {
-            statusElements.status.textContent = "● OFFLINE";
-            statusElements.status.className = "status-offline";
-            statusElements.online.textContent = "0";
-            statusElements.max.textContent = "--";
-            statusElements.bar.style.width = "0%";
-            statusElements.message.textContent =
+        if (data.online) {
+
+            const online = data.players.online;
+            const max = data.players.max;
+
+            statusLabel.textContent = "ONLINE";
+            statusLabel.className = "status-label online";
+
+            playerCount.textContent = online;
+            playerMax.textContent = max;
+
+            statusMessage.textContent =
+                "Negitoro Serverは現在オンラインです！";
+
+            const percentage = max > 0
+                ? Math.min((online / max) * 100, 100)
+                : 0;
+
+            statusBarFill.style.width = percentage + "%";
+
+        } else {
+
+            statusLabel.textContent = "OFFLINE";
+            statusLabel.className = "status-label offline";
+
+            playerCount.textContent = "0";
+            playerMax.textContent = "100";
+
+            statusMessage.textContent =
                 "現在サーバーに接続できません。";
-            return;
+
+            statusBarFill.style.width = "0%";
         }
 
-        const online = Number(data.players?.online);
-        const max = Number(data.players?.max);
-
-        if (!Number.isFinite(online) || !Number.isFinite(max) || max <= 0) {
-            throw new Error("Invalid player data");
+        if (statusLastUpdated) {
+            statusLastUpdated.textContent =
+                "最終確認：" + new Date().toLocaleTimeString("ja-JP");
         }
-
-        const percentage = Math.min(100, Math.max(0, online / max * 100));
-
-        statusElements.status.textContent = "● ONLINE";
-        statusElements.status.className = "status-online";
-        statusElements.online.textContent = online;
-        statusElements.max.textContent = max;
-        statusElements.bar.style.width = percentage + "%";
-        statusElements.message.textContent =
-            "Negitoro Network は正常に稼働中です！";
 
     } catch (error) {
-        console.error("[Negitoro Status]", error);
 
-        statusElements.status.textContent = "● UNKNOWN";
-        statusElements.status.className = "status-unknown";
-        statusElements.online.textContent = "--";
-        statusElements.max.textContent = "--";
-        statusElements.bar.style.width = "0%";
-        statusElements.message.textContent =
-            "サーバー情報を取得できませんでした。";
+        statusLabel.textContent = "UNKNOWN";
+        statusLabel.className = "status-label unknown";
+
+        statusMessage.textContent =
+            "サーバー状況を取得できませんでした。";
+
+        statusBarFill.style.width = "0%";
+
+        console.error("Server Status Error:", error);
     }
 }
 
-// 初回取得
+
+// ページ読み込み時に取得
 updateServerStatus();
 
-// 60秒ごとに更新（APIのキャッシュ期間に合わせる）
+// 60秒ごとに更新
 setInterval(updateServerStatus, 60000);
