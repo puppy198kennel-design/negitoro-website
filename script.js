@@ -1,13 +1,20 @@
+
 // ========================================
 // Negitoro Server - Script
 // ========================================
 
+
+// ========================================
 // サーバーアドレスコピー機能
+// ========================================
+
 const copyButton = document.getElementById("copyButton");
 const serverAddress = document.getElementById("serverAddress");
 
 if (copyButton && serverAddress) {
+
     copyButton.addEventListener("click", async () => {
+
         const address = serverAddress.textContent.trim();
 
         if (address === "準備中") {
@@ -16,6 +23,7 @@ if (copyButton && serverAddress) {
         }
 
         try {
+
             await navigator.clipboard.writeText(address);
 
             copyButton.textContent = "コピーしました！";
@@ -27,7 +35,9 @@ if (copyButton && serverAddress) {
         } catch {
             alert("コピーできませんでした。");
         }
+
     });
+
 }
 
 
@@ -45,6 +55,13 @@ const statusMessage = document.getElementById("statusMessage");
 const statusBarFill = document.getElementById("statusBarFill");
 const statusLastUpdated = document.getElementById("statusLastUpdated");
 
+// 更新ボタン
+const refreshStatusButton = document.getElementById("refreshStatusButton");
+
+// 更新中の多重実行を防止
+let isUpdatingStatus = false;
+
+
 async function updateServerStatus() {
 
     if (
@@ -57,7 +74,21 @@ async function updateServerStatus() {
         return;
     }
 
+    // すでに更新中なら処理しない
+    if (isUpdatingStatus) {
+        return;
+    }
+
+    isUpdatingStatus = true;
+
+    // ボタンを更新中の表示にする
+    if (refreshStatusButton) {
+        refreshStatusButton.disabled = true;
+        refreshStatusButton.textContent = "更新中...";
+    }
+
     try {
+
         const response = await fetch(STATUS_API_URL, {
             cache: "no-store"
         });
@@ -100,11 +131,15 @@ async function updateServerStatus() {
                 "現在サーバーに接続できません。";
 
             statusBarFill.style.width = "0%";
+
         }
 
         if (statusLastUpdated) {
+
             statusLastUpdated.textContent =
-                "最終確認：" + new Date().toLocaleTimeString("ja-JP");
+                "最終確認：" +
+                new Date().toLocaleTimeString("ja-JP");
+
         }
 
     } catch (error) {
@@ -118,12 +153,41 @@ async function updateServerStatus() {
         statusBarFill.style.width = "0%";
 
         console.error("Server Status Error:", error);
+
+    } finally {
+
+        isUpdatingStatus = false;
+
+        // ボタンを元に戻す
+        if (refreshStatusButton) {
+            refreshStatusButton.disabled = false;
+            refreshStatusButton.textContent = "↻ 更新";
+        }
+
     }
+
 }
 
+
+// ========================================
+// 手動更新ボタン
+// ========================================
+
+if (refreshStatusButton) {
+
+    refreshStatusButton.addEventListener("click", () => {
+        updateServerStatus();
+    });
+
+}
+
+
+// ========================================
+// 自動更新
+// ========================================
 
 // ページ読み込み時に取得
 updateServerStatus();
 
-// 60秒ごとに更新
+// 60秒ごとに自動更新
 setInterval(updateServerStatus, 60000);
