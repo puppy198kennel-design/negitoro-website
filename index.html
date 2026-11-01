@@ -4,115 +4,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Negitoro Server - 公式サイト</title>
     <meta name="description" content="Negitoro Serverの公式サイト！">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- Opening Animation -->
     <div id="logo-intro">
-    <img src="images/waterlily.svg" alt="">
-</div>
-    
-<header class="header">
-    <a href="#" class="logo">
-<span class="logo-mark">
-    <img src="images/waterlily.svg" alt="Negitoro Server">
-</span>
-        <span class="logo-text">
-            <strong>Negitoro Server</strong>
-            <small>OFFICIAL WEBSITE</small>
-        </span>
-    </a>
+        <img src="images/waterlily.svg" alt="">
+    </div>
 
-    <nav>
-        <a href="servers.html">サーバー紹介</a>
-        <a href="#features">特徴</a>
-        <a href="#join">参加方法</a>
-        <a href="#news">お知らせ</a>
-        <a href="guide.html">ガイド</a>
-        <a href="faq.html">FAQ</a>
-    </nav>
+    <!-- Header -->
+    <header class="header">
 
-    <a href="#join" class="header-button">JOIN US ↗</a>
-</header>
+        <a href="#" class="logo">
 
-<main>
-    <section class="hero">
-        <div class="hero-content">
-            <p class="subtitle">JAPANESE MINECRAFT SERVER</p>
-            <h1>新しい冒険を、<br>ここから。</h1>
-            <p>仲間と出会い、自分だけの物語を作ろう。</p>
-            <a href="#join" class="main-button">参加方法を見る →</a>
-        </div>
-    </section>
+            <span class="logo-mark">
+                <img src="images/waterlily.svg" alt="Negitoro Server">
+            </span>
+
+            <span class="logo-text">
+                <strong>Negitoro Server</strong>
+                <small>OFFICIAL WEBSITE</small>
+            </span>
+
+        </a>
+
+        <nav>
+            <a href="servers.html">サーバー紹介</a>
+            <a href="#features">特徴</a>
+            <a href="#join">参加方法</a>
+            <a href="#news">お知らせ</a>
+            <a href="guide.html">ガイド</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+
+        <a href="#join" class="header-button">
+            JOIN US ↗
+        </a>
+
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="subtitle">
+                    JAPANESE MINECRAFT SERVER
+                </p>
+
+                <h1>
+                    新しい冒険を、<br>
+                    ここから。
+                </h1>
+
+                <p>
+                    仲間と出会い、自分だけの物語を作ろう。
+                </p>
+
+                <a href="#join" class="main-button">
+                    参加方法を見る →
+                </a>
+
+            </div>
+
+        </section>
 
 
-    <section id="about" class="section about-section">
-        <div class="about-heading">
-            <p class="section-label">ABOUT US</p>
-            <h2>遊び方は、あなた次第。</h2>
-            <p class="about-description">
-                Negitoro Serverは、さまざまな楽しみ方ができる
-                Minecraft総合サーバーです。<br>
-                冒険、建築、交流。自分だけの楽しみ方を見つけよう。
+        <!-- Server Status -->
+        <section class="server-status-section">
+
+            <div class="server-status-card">
+
+                <div class="status-heading">
+
+                    <h2>SERVER STATUS</h2>
+
+                    <span id="serverStatus" class="status-label unknown">
+                        CHECKING
+                    </span>
+
+                </div>
+
+                <p id="statusMessage">
+                    サーバー状況を確認しています...
+                </p>
+
+                <div class="player-count">
+
+                    <span id="playerCount">--</span>
+
+                    <span class="player-separator">/</span>
+
+                    <span id="playerMax">--</span>
+
+                    <span class="player-unit">
+                        PLAYERS
+                    </span>
+
+                </div>
+
+                <div class="status-progress">
+                    <div id="statusBarFill"></div>
+                </div>
+
+                <p id="statusLastUpdated" class="status-updated">
+                    最終確認：--
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section id="about" class="section about-section">
+
+            <div class="about-heading">
+
+                <p class="section-label">
+                    ABOUT US
+                </p>
+
+                <h2>
+                    遊び方は、あなた次第。
+                </h2>
+
+                <p class="about-description">
+                    Negitoro Serverは、さまざまな楽しみ方ができる
+                    Minecraft総合サーバーです。<br>
+                    冒険、建築、交流。自分だけの楽しみ方を見つけよう。
+                </p>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+                    <span>⚔️</span>
+                    <h3>冒険する</h3>
+                    <p>自分だけの冒険を楽しもう。</p>
+                </div>
+
+                <div class="about-card">
+                    <span>🏯</span>
+                    <h3>建築する</h3>
+                    <p>自由な発想で世界を作ろう。</p>
+                </div>
+
+                <div class="about-card">
+                    <span>🤝</span>
+                    <h3>交流する</h3>
+                    <p>仲間と一緒に楽しもう。</p>
+                </div>
+
+                <div class="about-card">
+                    <span>🌸</span>
+                    <h3>自由に遊ぶ</h3>
+                    <p>自分らしい遊び方を見つけよう。</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section id="features" class="section">
+
+            <p class="section-label">
+                FEATURES
             </p>
-        </div>
 
-        <div class="about-grid">
-            <div class="about-card">
-                <span>⚔️</span>
-                <h3>冒険する</h3>
-                <p>自分だけの冒険を楽しもう。</p>
+            <h2>サーバーの特徴</h2>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <span>🌍</span>
+                    <h3>多彩な世界</h3>
+                    <p>さまざまなコンテンツを楽しめます。</p>
+                </div>
+
+                <div class="feature-card">
+                    <span>🤝</span>
+                    <h3>みんなで遊べる</h3>
+                    <p>仲間と一緒に冒険や建築を楽しもう。</p>
+                </div>
+
+                <div class="feature-card">
+                    <span>🌸</span>
+                    <h3>自由な遊び方</h3>
+                    <p>自分に合った楽しみ方を見つけよう。</p>
+                </div>
+
             </div>
 
-            <div class="about-card">
-                <span>🏯</span>
-                <h3>建築する</h3>
-                <p>自由な発想で世界を作ろう。</p>
+        </section>
+
+
+        <!-- Join -->
+        <section id="join" class="section join-section">
+
+            <p class="section-label">
+                HOW TO JOIN
+            </p>
+
+            <h2>サーバーに参加しよう</h2>
+
+            <div class="join-box">
+
+                <p>サーバーアドレス</p>
+
+                <div class="address-box">
+
+                    <code id="serverAddress">
+                        nicely-doses.tun.ply.gg
+                    </code>
+
+                    <button id="copyButton">
+                        コピー
+                    </button>
+
+                </div>
+
             </div>
 
-            <div class="about-card">
-                <span>🤝</span>
-                <h3>交流する</h3>
-                <p>仲間と一緒に楽しもう。</p>
+        </section>
+
+
+        <!-- News -->
+        <section id="news" class="section">
+
+            <p class="section-label">
+                NEWS
+            </p>
+
+            <h2>お知らせ</h2>
+
+            <div class="news-card">
+
+                <span>2026.10.30</span>
+
+                <p>公式サイト制作開始！</p>
+
             </div>
 
-            <div class="about-card">
-                <span>🌸</span>
-                <h3>自由に遊ぶ</h3>
-                <p>自分らしい遊び方を見つけよう。</p>
-            </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
 
-    <section id="join" class="section join-section">
-        <p class="section-label">HOW TO JOIN</p>
-        <h2>サーバーに参加しよう</h2>
-        <div class="join-box">
-            <p>サーバーアドレス</p>
-            <div class="address-box">
-                <code id="serverAddress">nicely-doses.tun.ply.gg</code>
-                <button id="copyButton">コピー</button>
-            </div>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
 
-    <section id="news" class="section">
-        <p class="section-label">NEWS</p>
-        <h2>お知らせ</h2>
-        <div class="news-card">
-            <span>2026.10.30</span>
-            <p>公式サイト制作開始！</p>
-        </div>
-    </section>
-</main>
+        <h3>🍣 Negitoro Server</h3>
 
-<footer class="footer">
-    <h3>🍣 Negitoro Server</h3>
-    <p>© 2026 Negitoro Server</p>
-</footer>
+        <p>© 2026 Negitoro Server</p>
 
-<script src="script.js"></script>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 </html>
