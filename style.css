@@ -680,8 +680,6 @@ a.about-card:focus {
     filter: brightness(0.9);
 }
 
-/* Lightbox Background */
-
 #image-lightbox {
     position: fixed;
     inset: 0;
@@ -702,15 +700,11 @@ a.about-card:focus {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Open */
-
 #image-lightbox.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
-
-/* Enlarged Image */
 
 #image-lightbox img {
     max-width: 90vw;
@@ -732,8 +726,6 @@ a.about-card:focus {
 #image-lightbox.active img {
     transform: scale(1);
 }
-
-/* Close Button */
 
 #lightbox-close {
     position: absolute;
@@ -891,6 +883,40 @@ a.about-card:focus {
     text-align: right;
 }
 
+/* =================================
+   Server Status Refresh Button
+================================= */
+
+.status-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#refreshStatusButton {
+    padding: 8px 15px;
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+    background: transparent;
+    color: var(--navy);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#refreshStatusButton:hover:not(:disabled) {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+#refreshStatusButton:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
 @media (max-width: 600px) {
     .server-status-card {
         padding: 25px 20px;
@@ -902,5 +928,12 @@ a.about-card:focus {
 
     #playerCount {
         font-size: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .status-actions {
+        width: 100%;
+        justify-content: space-between;
     }
 }
