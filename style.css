@@ -123,12 +123,12 @@ body {
     justify-content: space-between;
     align-items: center;
     background:
-            linear-gradient(
-                    90deg,
-                    rgba(15, 23, 38, 0.88),
-                    rgba(15, 23, 38, 0.35)
-            ),
-            url("images/server-spawn.png");
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 38, 0.88),
+            rgba(15, 23, 38, 0.35)
+        ),
+        url("images/server-spawn.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -474,6 +474,7 @@ a.about-card:focus {
         padding: 20px;
     }
 }
+
 /* =================================
    Servers Page - Layout Fix
 ================================= */
@@ -543,6 +544,7 @@ a.about-card:focus {
         aspect-ratio: 16 / 9;
     }
 }
+
 /* Servers Hero Text Fix */
 
 .servers-hero {
@@ -582,6 +584,7 @@ a.about-card:focus {
     line-height: 1.9;
     text-align: center;
 }
+
 /* Servers Bottom Text Fix */
 
 .servers-bottom {
@@ -663,6 +666,7 @@ a.about-card:focus {
         visibility: hidden;
     }
 }
+
 /* =================================
    Negitoro Image Lightbox
 ================================= */
@@ -770,4 +774,133 @@ a.about-card:focus {
 .servers-bottom .main-button {
     display: inline-block;
     margin: 0 auto;
+}
+
+/* =================================
+   Negitoro Server Status
+================================= */
+
+.server-status-section {
+    padding: 55px 20px;
+    background: var(--paper);
+}
+
+.server-status-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #fffaf0;
+    border: 1px solid #e4d8c2;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(38, 59, 80, 0.08);
+}
+
+.status-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.status-heading h2 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.status-label {
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.status-label.online {
+    color: #237548;
+    background: #dff3e6;
+}
+
+.status-label.offline {
+    color: #a83232;
+    background: #f8dfdf;
+}
+
+.status-label.unknown {
+    color: #806b42;
+    background: #eee6d4;
+}
+
+.server-status-card #statusMessage {
+    margin: 22px 0;
+    color: #526171;
+    font-size: 14px;
+}
+
+.player-count {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: var(--navy);
+    font-weight: 900;
+}
+
+#playerCount {
+    font-size: 48px;
+}
+
+.player-separator {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+#playerMax {
+    font-size: 25px;
+}
+
+.player-unit {
+    margin-left: 8px;
+    color: #8b8b8b;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.status-progress {
+    width: 100%;
+    height: 12px;
+    margin-top: 20px;
+    overflow: hidden;
+    background: #e9e1d2;
+    border-radius: 20px;
+}
+
+#statusBarFill {
+    width: 0%;
+    height: 100%;
+    background: var(--gold);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.status-updated {
+    margin-top: 15px;
+    color: #999;
+    font-size: 11px;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .server-status-card {
+        padding: 25px 20px;
+    }
+
+    .status-heading h2 {
+        font-size: 18px;
+    }
+
+    #playerCount {
+        font-size: 40px;
+    }
 }
