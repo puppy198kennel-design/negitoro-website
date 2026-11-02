@@ -26,17 +26,29 @@
     </a>
 
     <nav>
-        <a href="servers.html">サーバー紹介</a>
-        <a href="index.html#features">特徴</a>
-        <a href="index.html#join">参加方法</a>
-        <a href="index.html#news">お知らせ</a>
-        <a href="guide.html">ガイド</a>
+        <a href="servers.html" data-i18n="nav_servers">サーバー紹介</a>
+        <a href="index.html#features" data-i18n="nav_features">特徴</a>
+        <a href="index.html#join" data-i18n="nav_join">参加方法</a>
+        <a href="index.html#news" data-i18n="nav_news">お知らせ</a>
+        <a href="guide.html" data-i18n="nav_guide">ガイド</a>
         <a href="faq.html">FAQ</a>
     </nav>
 
-    <a href="index.html#join" class="header-button">
-        JOIN US ↗
-    </a>
+    <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="zh-CN">🇨🇳 简体中文</option>
+            <option value="zh-TW">🇹🇼 繁體中文</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="fr">🇫🇷 Français</option>
+        </select>
+
+        <a href="index.html#join" class="header-button">
+            JOIN US ↗
+        </a>
+    </div>
 </header>
 
 <main>
@@ -45,9 +57,9 @@
         <div class="about-heading">
             <p class="section-label">SERVER GUIDE</p>
 
-            <h1>サーバーガイド</h1>
+            <h1 data-i18n="guide_title">サーバーガイド</h1>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="guide_description">
                 Negitoro Serverへようこそ。<br>
                 ここではサーバーの遊び方や基本情報を紹介します。
             </p>
@@ -57,33 +69,33 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">CONTENTS</p>
-            <h2>ガイドメニュー</h2>
+            <h2 data-i18n="menu_title">ガイドメニュー</h2>
         </div>
 
         <div class="about-grid">
 
             <a href="start.html" class="about-card">
                 <span>🌸</span>
-                <h3>はじめに</h3>
-                <p>サーバーの基本情報を紹介します。</p>
+                <h3 data-i18n="start_title">はじめに</h3>
+                <p data-i18n="start_description">サーバーの基本情報を紹介します。</p>
             </a>
 
             <a href="play.html" class="about-card">
                 <span>⚔️</span>
-                <h3>遊び方</h3>
-                <p>サーバーで楽しめるコンテンツを紹介します。</p>
+                <h3 data-i18n="play_title">遊び方</h3>
+                <p data-i18n="play_description">サーバーで楽しめるコンテンツを紹介します。</p>
             </a>
 
             <a href="rules.html" class="about-card">
                 <span>📜</span>
-                <h3>ルール</h3>
-                <p>みんなで楽しく遊ぶためのルールです。</p>
+                <h3 data-i18n="rules_title">ルール</h3>
+                <p data-i18n="rules_description">みんなで楽しく遊ぶためのルールです。</p>
             </a>
 
             <a href="commands.html" class="about-card">
                 <span>⌨️</span>
-                <h3>コマンド</h3>
-                <p>便利なコマンドを紹介します。</p>
+                <h3 data-i18n="commands_title">コマンド</h3>
+                <p data-i18n="commands_description">便利なコマンドを紹介します。</p>
             </a>
 
         </div>
@@ -93,13 +105,13 @@
         <div class="about-heading">
             <p class="section-label">WELCOME</p>
 
-            <h2>冒険を始めよう。</h2>
+            <h2 data-i18n="welcome_title">冒険を始めよう。</h2>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="welcome_description">
                 あなたらしい楽しみ方を見つけてください。
             </p>
 
-            <a href="index.html" class="main-button">
+            <a href="index.html" class="main-button" data-i18n="back_home">
                 トップページへ戻る →
             </a>
         </div>
@@ -110,6 +122,283 @@
 <footer class="footer">
     <p>© Negitoro Server. All Rights Reserved.</p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const translations = {
+
+        ja: {
+            nav_servers: "サーバー紹介",
+            nav_features: "特徴",
+            nav_join: "参加方法",
+            nav_news: "お知らせ",
+            nav_guide: "ガイド",
+
+            guide_title: "サーバーガイド",
+            guide_description: "Negitoro Serverへようこそ。<br>ここではサーバーの遊び方や基本情報を紹介します。",
+
+            menu_title: "ガイドメニュー",
+
+            start_title: "はじめに",
+            start_description: "サーバーの基本情報を紹介します。",
+
+            play_title: "遊び方",
+            play_description: "サーバーで楽しめるコンテンツを紹介します。",
+
+            rules_title: "ルール",
+            rules_description: "みんなで楽しく遊ぶためのルールです。",
+
+            commands_title: "コマンド",
+            commands_description: "便利なコマンドを紹介します。",
+
+            welcome_title: "冒険を始めよう。",
+            welcome_description: "あなたらしい楽しみ方を見つけてください。",
+            back_home: "トップページへ戻る →"
+        },
+
+        en: {
+            nav_servers: "Our Servers",
+            nav_features: "Features",
+            nav_join: "How to Join",
+            nav_news: "News",
+            nav_guide: "Guide",
+
+            guide_title: "Server Guide",
+            guide_description: "Welcome to Negitoro Server.<br>Here you'll find information about how to play and the server basics.",
+
+            menu_title: "Guide Menu",
+
+            start_title: "Getting Started",
+            start_description: "Learn the basic information about the server.",
+
+            play_title: "How to Play",
+            play_description: "Discover the content you can enjoy on the server.",
+
+            rules_title: "Rules",
+            rules_description: "Rules to help everyone enjoy playing together.",
+
+            commands_title: "Commands",
+            commands_description: "Discover useful server commands.",
+
+            welcome_title: "Start Your Adventure.",
+            welcome_description: "Find your own way to enjoy the server.",
+            back_home: "Back to Home →"
+        },
+
+        ko: {
+            nav_servers: "서버 소개",
+            nav_features: "특징",
+            nav_join: "참가 방법",
+            nav_news: "공지사항",
+            nav_guide: "가이드",
+
+            guide_title: "서버 가이드",
+            guide_description: "Negitoro Server에 오신 것을 환영합니다.<br>서버 플레이 방법과 기본 정보를 소개합니다.",
+
+            menu_title: "가이드 메뉴",
+
+            start_title: "처음 시작하기",
+            start_description: "서버의 기본 정보를 소개합니다.",
+
+            play_title: "플레이 방법",
+            play_description: "서버에서 즐길 수 있는 콘텐츠를 소개합니다.",
+
+            rules_title: "규칙",
+            rules_description: "모두가 즐겁게 플레이하기 위한 규칙입니다.",
+
+            commands_title: "명령어",
+            commands_description: "유용한 서버 명령어를 소개합니다.",
+
+            welcome_title: "모험을 시작해 보세요.",
+            welcome_description: "나만의 방식으로 서버를 즐겨보세요.",
+            back_home: "홈으로 돌아가기 →"
+        },
+
+        "zh-CN": {
+            nav_servers: "服务器介绍",
+            nav_features: "特色",
+            nav_join: "加入方法",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            guide_title: "服务器指南",
+            guide_description: "欢迎来到 Negitoro Server。<br>这里将介绍服务器的玩法和基本信息。",
+
+            menu_title: "指南菜单",
+
+            start_title: "入门介绍",
+            start_description: "了解服务器的基本信息。",
+
+            play_title: "游玩方式",
+            play_description: "了解服务器中可以体验的内容。",
+
+            rules_title: "规则",
+            rules_description: "为了让大家愉快游玩，请遵守这些规则。",
+
+            commands_title: "指令",
+            commands_description: "了解实用的服务器指令。",
+
+            welcome_title: "开始你的冒险吧。",
+            welcome_description: "找到属于自己的游玩方式。",
+            back_home: "返回首页 →"
+        },
+
+        "zh-TW": {
+            nav_servers: "伺服器介紹",
+            nav_features: "特色",
+            nav_join: "加入方式",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            guide_title: "伺服器指南",
+            guide_description: "歡迎來到 Negitoro Server。<br>這裡將介紹伺服器的玩法和基本資訊。",
+
+            menu_title: "指南選單",
+
+            start_title: "入門介紹",
+            start_description: "了解伺服器的基本資訊。",
+
+            play_title: "遊玩方式",
+            play_description: "了解伺服器中可以體驗的內容。",
+
+            rules_title: "規則",
+            rules_description: "為了讓大家愉快遊玩，請遵守這些規則。",
+
+            commands_title: "指令",
+            commands_description: "了解實用的伺服器指令。",
+
+            welcome_title: "開始你的冒險吧。",
+            welcome_description: "找到屬於自己的遊玩方式。",
+            back_home: "返回首頁 →"
+        },
+
+        de: {
+            nav_servers: "Unsere Server",
+            nav_features: "Features",
+            nav_join: "Beitreten",
+            nav_news: "Neuigkeiten",
+            nav_guide: "Anleitung",
+
+            guide_title: "Server-Anleitung",
+            guide_description: "Willkommen auf Negitoro Server.<br>Hier findest du Informationen zum Spielen und zu den Grundlagen des Servers.",
+
+            menu_title: "Anleitungsmenü",
+
+            start_title: "Erste Schritte",
+            start_description: "Hier findest du die grundlegenden Informationen zum Server.",
+
+            play_title: "Spielanleitung",
+            play_description: "Entdecke die Inhalte, die du auf dem Server erleben kannst.",
+
+            rules_title: "Regeln",
+            rules_description: "Regeln für ein angenehmes gemeinsames Spielerlebnis.",
+
+            commands_title: "Befehle",
+            commands_description: "Entdecke nützliche Server-Befehle.",
+
+            welcome_title: "Starte dein Abenteuer.",
+            welcome_description: "Finde deinen eigenen Weg, den Server zu genießen.",
+            back_home: "Zurück zur Startseite →"
+        },
+
+        fr: {
+            nav_servers: "Nos serveurs",
+            nav_features: "Fonctionnalités",
+            nav_join: "Comment rejoindre",
+            nav_news: "Actualités",
+            nav_guide: "Guide",
+
+            guide_title: "Guide du serveur",
+            guide_description: "Bienvenue sur Negitoro Server.<br>Tu trouveras ici des informations sur le fonctionnement et les bases du serveur.",
+
+            menu_title: "Menu du guide",
+
+            start_title: "Bien commencer",
+            start_description: "Découvre les informations de base du serveur.",
+
+            play_title: "Comment jouer",
+            play_description: "Découvre les activités disponibles sur le serveur.",
+
+            rules_title: "Règles",
+            rules_description: "Les règles pour que tout le monde puisse s'amuser ensemble.",
+
+            commands_title: "Commandes",
+            commands_description: "Découvre les commandes utiles du serveur.",
+
+            welcome_title: "Commence ton aventure.",
+            welcome_description: "Trouve ta propre façon de profiter du serveur.",
+            back_home: "Retour à l'accueil →"
+        }
+
+    };
+
+    const languageSelect = document.getElementById("languageSelect");
+
+    function getInitialLanguage() {
+        const savedLanguage = localStorage.getItem("negitoro-language");
+
+        if (savedLanguage && translations[savedLanguage]) {
+            return savedLanguage;
+        }
+
+        const browserLanguage = navigator.language;
+
+        if (browserLanguage.startsWith("zh")) {
+            return browserLanguage.includes("TW") || browserLanguage.includes("HK")
+                ? "zh-TW"
+                : "zh-CN";
+        }
+
+        if (browserLanguage.startsWith("ko")) return "ko";
+        if (browserLanguage.startsWith("de")) return "de";
+        if (browserLanguage.startsWith("fr")) return "fr";
+        if (browserLanguage.startsWith("en")) return "en";
+
+        return "ja";
+    }
+
+    function applyLanguage(language) {
+        if (!translations[language]) {
+            language = "ja";
+        }
+
+        const t = translations[language];
+
+        document.documentElement.lang = language;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+            const key = element.dataset.i18n;
+
+            if (t[key]) {
+                element.innerHTML = t[key];
+            }
+        });
+
+        const titles = {
+            ja: "ガイド | Negitoro Server",
+            en: "Guide | Negitoro Server",
+            ko: "가이드 | Negitoro Server",
+            "zh-CN": "指南 | Negitoro Server",
+            "zh-TW": "指南 | Negitoro Server",
+            de: "Anleitung | Negitoro Server",
+            fr: "Guide | Negitoro Server"
+        };
+
+        document.title = titles[language];
+
+        localStorage.setItem("negitoro-language", language);
+        languageSelect.value = language;
+    }
+
+    applyLanguage(getInitialLanguage());
+
+    languageSelect.addEventListener("change", event => {
+        applyLanguage(event.target.value);
+    });
+
+});
+</script>
 
 </body>
 </html>
