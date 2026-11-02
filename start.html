@@ -26,16 +26,28 @@
     </a>
 
     <nav>
-        <a href="index.html#about">サーバー紹介</a>
-        <a href="index.html#features">特徴</a>
-        <a href="index.html#join">参加方法</a>
-        <a href="index.html#news">お知らせ</a>
-        <a href="guide.html">ガイド</a>
+        <a href="index.html#about" data-i18n="nav_servers">サーバー紹介</a>
+        <a href="index.html#features" data-i18n="nav_features">特徴</a>
+        <a href="index.html#join" data-i18n="nav_join">参加方法</a>
+        <a href="index.html#news" data-i18n="nav_news">お知らせ</a>
+        <a href="guide.html" data-i18n="nav_guide">ガイド</a>
     </nav>
 
-    <a href="index.html#join" class="header-button">
-        JOIN US ↗
-    </a>
+    <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="zh-CN">🇨🇳 简体中文</option>
+            <option value="zh-TW">🇹🇼 繁體中文</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="fr">🇫🇷 Français</option>
+        </select>
+
+        <a href="index.html#join" class="header-button">
+            JOIN US ↗
+        </a>
+    </div>
 </header>
 
 <main>
@@ -44,9 +56,9 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">GETTING STARTED</p>
-            <h1>はじめに</h1>
+            <h1 data-i18n="page_title">はじめに</h1>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="page_description">
                 Negitoro Serverへようこそ！<br>
                 ここではサーバーの基本情報を紹介します。
             </p>
@@ -57,9 +69,9 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">ABOUT SERVER</p>
-            <h2>Negitoro Serverとは？</h2>
+            <h2 data-i18n="about_title">Negitoro Serverとは？</h2>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="about_description">
                 Negitoro Serverは、さまざまな遊び方を楽しめる<br>
                 Minecraft総合サーバーです。<br><br>
                 冒険、建築、交流など、楽しみ方は自由自在。<br>
@@ -72,33 +84,33 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">INFORMATION</p>
-            <h2>基本情報</h2>
+            <h2 data-i18n="info_title">基本情報</h2>
         </div>
 
         <div class="about-grid">
 
             <div class="about-card">
                 <span>🎮</span>
-                <h3>ゲーム</h3>
+                <h3 data-i18n="game_title">ゲーム</h3>
                 <p>Minecraft Java Edition</p>
             </div>
 
             <div class="about-card">
                 <span>🌸</span>
-                <h3>サーバー</h3>
+                <h3 data-i18n="server_title">サーバー</h3>
                 <p>Negitoro Server</p>
             </div>
 
             <div class="about-card">
                 <span>🏯</span>
-                <h3>ジャンル</h3>
-                <p>Minecraft総合サーバー</p>
+                <h3 data-i18n="genre_title">ジャンル</h3>
+                <p data-i18n="genre_description">Minecraft総合サーバー</p>
             </div>
 
             <div class="about-card">
                 <span>🤝</span>
-                <h3>プレイスタイル</h3>
-                <p>冒険・建築・交流など</p>
+                <h3 data-i18n="style_title">プレイスタイル</h3>
+                <p data-i18n="style_description">冒険・建築・交流など</p>
             </div>
 
         </div>
@@ -108,19 +120,19 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">NEXT STEP</p>
-            <h2>さっそく遊んでみよう。</h2>
+            <h2 data-i18n="next_title">さっそく遊んでみよう。</h2>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="next_description">
                 サーバーの遊び方やルールも確認してみてください。
             </p>
 
-            <a href="play.html" class="main-button">
+            <a href="play.html" class="main-button" data-i18n="play_button">
                 遊び方を見る →
             </a>
 
             <br>
 
-            <a href="guide.html" class="main-button">
+            <a href="guide.html" class="main-button" data-i18n="guide_button">
                 ガイド一覧へ戻る →
             </a>
         </div>
@@ -131,6 +143,269 @@
 <footer class="footer">
     <p>© Negitoro Server. All Rights Reserved.</p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const translations = {
+
+        ja: {
+            nav_servers: "サーバー紹介",
+            nav_features: "特徴",
+            nav_join: "参加方法",
+            nav_news: "お知らせ",
+            nav_guide: "ガイド",
+
+            page_title: "はじめに",
+            page_description: "Negitoro Serverへようこそ！<br>ここではサーバーの基本情報を紹介します。",
+
+            about_title: "Negitoro Serverとは？",
+            about_description: "Negitoro Serverは、さまざまな遊び方を楽しめる<br>Minecraft総合サーバーです。<br><br>冒険、建築、交流など、楽しみ方は自由自在。<br>自分だけのMinecraftライフを始めよう！",
+
+            info_title: "基本情報",
+            game_title: "ゲーム",
+            server_title: "サーバー",
+            genre_title: "ジャンル",
+            genre_description: "Minecraft総合サーバー",
+            style_title: "プレイスタイル",
+            style_description: "冒険・建築・交流など",
+
+            next_title: "さっそく遊んでみよう。",
+            next_description: "サーバーの遊び方やルールも確認してみてください。",
+            play_button: "遊び方を見る →",
+            guide_button: "ガイド一覧へ戻る →"
+        },
+
+        en: {
+            nav_servers: "Our Servers",
+            nav_features: "Features",
+            nav_join: "How to Join",
+            nav_news: "News",
+            nav_guide: "Guide",
+
+            page_title: "Getting Started",
+            page_description: "Welcome to Negitoro Server!<br>Here you'll find the basic information about our server.",
+
+            about_title: "What is Negitoro Server?",
+            about_description: "Negitoro Server is a Minecraft network where you can enjoy many different ways to play.<br><br>Adventure, building, and socializing — the choice is yours.<br>Start your own Minecraft journey!",
+
+            info_title: "Basic Information",
+            game_title: "Game",
+            server_title: "Server",
+            genre_title: "Genre",
+            genre_description: "Minecraft Network",
+            style_title: "Play Style",
+            style_description: "Adventure, Building, Socializing, and More",
+
+            next_title: "Let's Start Playing!",
+            next_description: "You can also check out how to play and the server rules.",
+            play_button: "How to Play →",
+            guide_button: "Back to Guide Menu →"
+        },
+
+        ko: {
+            nav_servers: "서버 소개",
+            nav_features: "특징",
+            nav_join: "참가 방법",
+            nav_news: "공지사항",
+            nav_guide: "가이드",
+
+            page_title: "처음 시작하기",
+            page_description: "Negitoro Server에 오신 것을 환영합니다!<br>이곳에서 서버의 기본 정보를 소개합니다.",
+
+            about_title: "Negitoro Server란?",
+            about_description: "Negitoro Server는 다양한 방식으로 즐길 수 있는<br>Minecraft 종합 서버입니다.<br><br>모험, 건축, 교류 등 원하는 방식으로 즐겨보세요.<br>나만의 Minecraft 생활을 시작해 보세요!",
+
+            info_title: "기본 정보",
+            game_title: "게임",
+            server_title: "서버",
+            genre_title: "장르",
+            genre_description: "Minecraft 종합 서버",
+            style_title: "플레이 스타일",
+            style_description: "모험 · 건축 · 교류 등",
+
+            next_title: "지금 바로 플레이해 보세요.",
+            next_description: "서버 플레이 방법과 규칙도 확인해 보세요.",
+            play_button: "플레이 방법 보기 →",
+            guide_button: "가이드 메뉴로 돌아가기 →"
+        },
+
+        "zh-CN": {
+            nav_servers: "服务器介绍",
+            nav_features: "特色",
+            nav_join: "加入方法",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            page_title: "入门介绍",
+            page_description: "欢迎来到 Negitoro Server！<br>这里将介绍服务器的基本信息。",
+
+            about_title: "什么是 Negitoro Server？",
+            about_description: "Negitoro Server 是一个可以体验多种玩法的<br>Minecraft 综合服务器。<br><br>冒险、建筑、交流，选择你喜欢的方式。<br>开始属于自己的 Minecraft 生活吧！",
+
+            info_title: "基本信息",
+            game_title: "游戏",
+            server_title: "服务器",
+            genre_title: "类型",
+            genre_description: "Minecraft 综合服务器",
+            style_title: "游玩风格",
+            style_description: "冒险、建筑、交流等",
+
+            next_title: "马上开始游玩吧。",
+            next_description: "也可以查看服务器的玩法和规则。",
+            play_button: "查看游玩方式 →",
+            guide_button: "返回指南菜单 →"
+        },
+
+        "zh-TW": {
+            nav_servers: "伺服器介紹",
+            nav_features: "特色",
+            nav_join: "加入方式",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            page_title: "入門介紹",
+            page_description: "歡迎來到 Negitoro Server！<br>這裡將介紹伺服器的基本資訊。",
+
+            about_title: "什麼是 Negitoro Server？",
+            about_description: "Negitoro Server 是一個可以體驗多種玩法的<br>Minecraft 綜合伺服器。<br><br>冒險、建築、交流，選擇你喜歡的方式。<br>開始屬於自己的 Minecraft 生活吧！",
+
+            info_title: "基本資訊",
+            game_title: "遊戲",
+            server_title: "伺服器",
+            genre_title: "類型",
+            genre_description: "Minecraft 綜合伺服器",
+            style_title: "遊玩風格",
+            style_description: "冒險、建築、交流等",
+
+            next_title: "馬上開始遊玩吧。",
+            next_description: "也可以查看伺服器的玩法和規則。",
+            play_button: "查看遊玩方式 →",
+            guide_button: "返回指南選單 →"
+        },
+
+        de: {
+            nav_servers: "Unsere Server",
+            nav_features: "Features",
+            nav_join: "Beitreten",
+            nav_news: "Neuigkeiten",
+            nav_guide: "Anleitung",
+
+            page_title: "Erste Schritte",
+            page_description: "Willkommen auf Negitoro Server!<br>Hier findest du die grundlegenden Informationen zu unserem Server.",
+
+            about_title: "Was ist Negitoro Server?",
+            about_description: "Negitoro Server ist ein Minecraft-Netzwerk mit vielen verschiedenen Spielmöglichkeiten.<br><br>Abenteuer, Bauen und Gemeinschaft – du entscheidest.<br>Beginne dein eigenes Minecraft-Abenteuer!",
+
+            info_title: "Grundinformationen",
+            game_title: "Spiel",
+            server_title: "Server",
+            genre_title: "Genre",
+            genre_description: "Minecraft-Netzwerk",
+            style_title: "Spielstil",
+            style_description: "Abenteuer, Bauen, Gemeinschaft und mehr",
+
+            next_title: "Fangen wir an!",
+            next_description: "Du kannst dir auch die Spielanleitung und die Serverregeln ansehen.",
+            play_button: "Spielanleitung ansehen →",
+            guide_button: "Zurück zum Anleitungsmenü →"
+        },
+
+        fr: {
+            nav_servers: "Nos serveurs",
+            nav_features: "Fonctionnalités",
+            nav_join: "Comment rejoindre",
+            nav_news: "Actualités",
+            nav_guide: "Guide",
+
+            page_title: "Bien commencer",
+            page_description: "Bienvenue sur Negitoro Server !<br>Tu trouveras ici les informations de base sur notre serveur.",
+
+            about_title: "Qu'est-ce que Negitoro Server ?",
+            about_description: "Negitoro Server est un réseau Minecraft proposant de nombreuses façons de jouer.<br><br>Aventure, construction et rencontres : c'est toi qui choisis.<br>Commence ta propre aventure Minecraft !",
+
+            info_title: "Informations générales",
+            game_title: "Jeu",
+            server_title: "Serveur",
+            genre_title: "Genre",
+            genre_description: "Réseau Minecraft",
+            style_title: "Style de jeu",
+            style_description: "Aventure, construction, rencontres et plus",
+
+            next_title: "Commençons à jouer !",
+            next_description: "Tu peux aussi consulter les modes de jeu et les règles du serveur.",
+            play_button: "Voir comment jouer →",
+            guide_button: "Retour au menu du guide →"
+        }
+
+    };
+
+    const languageSelect = document.getElementById("languageSelect");
+
+    function getInitialLanguage() {
+        const savedLanguage = localStorage.getItem("negitoro-language");
+
+        if (savedLanguage && translations[savedLanguage]) {
+            return savedLanguage;
+        }
+
+        const browserLanguage = navigator.language;
+
+        if (browserLanguage.startsWith("zh")) {
+            return browserLanguage.includes("TW") || browserLanguage.includes("HK")
+                ? "zh-TW"
+                : "zh-CN";
+        }
+
+        if (browserLanguage.startsWith("ko")) return "ko";
+        if (browserLanguage.startsWith("de")) return "de";
+        if (browserLanguage.startsWith("fr")) return "fr";
+        if (browserLanguage.startsWith("en")) return "en";
+
+        return "ja";
+    }
+
+    function applyLanguage(language) {
+        if (!translations[language]) {
+            language = "ja";
+        }
+
+        const t = translations[language];
+
+        document.documentElement.lang = language;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+            const key = element.dataset.i18n;
+
+            if (t[key]) {
+                element.innerHTML = t[key];
+            }
+        });
+
+        const titles = {
+            ja: "はじめに | Negitoro Server",
+            en: "Getting Started | Negitoro Server",
+            ko: "처음 시작하기 | Negitoro Server",
+            "zh-CN": "入门介绍 | Negitoro Server",
+            "zh-TW": "入門介紹 | Negitoro Server",
+            de: "Erste Schritte | Negitoro Server",
+            fr: "Bien commencer | Negitoro Server"
+        };
+
+        document.title = titles[language];
+
+        localStorage.setItem("negitoro-language", language);
+        languageSelect.value = language;
+    }
+
+    applyLanguage(getInitialLanguage());
+
+    languageSelect.addEventListener("change", event => {
+        applyLanguage(event.target.value);
+    });
+
+});
+</script>
 
 </body>
 </html>
