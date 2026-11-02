@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -21,79 +22,91 @@
     </a>
 
     <nav>
-        <a href="index.html#about">サーバー紹介</a>
-        <a href="index.html#features">特徴</a>
-        <a href="index.html#join">参加方法</a>
-        <a href="index.html#news">お知らせ</a>
-        <a href="guide.html">ガイド</a>
+        <a href="index.html#about" data-i18n="nav_about">サーバー紹介</a>
+        <a href="index.html#features" data-i18n="nav_features">特徴</a>
+        <a href="index.html#join" data-i18n="nav_join">参加方法</a>
+        <a href="index.html#news" data-i18n="nav_news">お知らせ</a>
+        <a href="guide.html" data-i18n="nav_guide">ガイド</a>
         <a href="faq.html">FAQ</a>
     </nav>
 
-    <a href="index.html#join" class="header-button">JOIN US ↗</a>
+    <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="zh-CN">🇨🇳 简体中文</option>
+            <option value="zh-TW">🇹🇼 繁體中文</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="fr">🇫🇷 Français</option>
+        </select>
+
+        <a href="index.html#join" class="header-button">JOIN US ↗</a>
+    </div>
 </header>
 
 <main>
     <section class="servers-hero">
         <p class="section-label">OUR SERVERS</p>
-        <h1>それぞれの世界で、<br>自分だけの楽しみ方を。</h1>
-        <p>Negitoro Serverで遊べる6つのサーバーを紹介！</p>
+        <h1 data-i18n="servers_title">それぞれの世界で、<br>自分だけの楽しみ方を。</h1>
+        <p data-i18n="servers_subtitle">Negitoro Serverで遊べる6つのサーバーを紹介！</p>
     </section>
 
     <section class="section servers-section">
         <div class="servers-grid">
 
             <article class="server-card">
-                <img src="images/server-lobby.png" alt="ロビー">
+                <img src="images/server-lobby.png" alt="ロビー" data-i18n-alt="lobby_name">
                 <div class="server-card-content">
                     <span class="server-number">01 / LOBBY</span>
-                    <h2>ロビー</h2>
-                    <p>Negitoro Serverの玄関口。各サーバーへの移動や案内はこちらから！</p>
+                    <h2 data-i18n="lobby_name">ロビー</h2>
+                    <p data-i18n="lobby_desc">Negitoro Serverの玄関口。各サーバーへの移動や案内はこちらから！</p>
                 </div>
             </article>
 
             <article class="server-card">
-                <img src="images/server-economy.png" alt="経済サーバー">
+                <img src="images/server-economy.png" alt="経済サーバー" data-i18n-alt="economy_name">
                 <div class="server-card-content">
                     <span class="server-number">02 / ECONOMY</span>
-                    <h2>経済</h2>
-                    <p>お金を稼いだり、買い物をしたり。経済の仕組みを楽しもう！</p>
-                    <span class="server-status">リニューアル予定</span>
+                    <h2 data-i18n="economy_name">経済</h2>
+                    <p data-i18n="economy_desc">お金を稼いだり、買い物をしたり。経済の仕組みを楽しもう！</p>
+                    <span class="server-status" data-i18n="economy_status">リニューアル予定</span>
                 </div>
             </article>
 
             <article class="server-card">
-                <img src="images/server-building.png" alt="建築サーバー">
+                <img src="images/server-building.png" alt="建築サーバー" data-i18n-alt="building_name">
                 <div class="server-card-content">
                     <span class="server-number">03 / BUILDING</span>
-                    <h2>建築</h2>
-                    <p>自由な発想で建築を楽しもう。自分だけの作品を作り上げよう！</p>
+                    <h2 data-i18n="building_name">建築</h2>
+                    <p data-i18n="building_desc">自由な発想で建築を楽しもう。自分だけの作品を作り上げよう！</p>
                 </div>
             </article>
 
             <article class="server-card">
-                <img src="images/server-survival.png" alt="サバイバルサーバー">
+                <img src="images/server-survival.png" alt="サバイバルサーバー" data-i18n-alt="survival_name">
                 <div class="server-card-content">
                     <span class="server-number">04 / SURVIVAL</span>
-                    <h2>サバイバル</h2>
-                    <p>冒険、採掘、生活。Minecraftならではのサバイバルを楽しもう！</p>
+                    <h2 data-i18n="survival_name">サバイバル</h2>
+                    <p data-i18n="survival_desc">冒険、採掘、生活。Minecraftならではのサバイバルを楽しもう！</p>
                 </div>
             </article>
 
             <article class="server-card">
-                <img src="images/server-ffa.png" alt="FFAサーバー">
+                <img src="images/server-ffa.png" alt="FFAサーバー" data-i18n-alt="ffa_name">
                 <div class="server-card-content">
                     <span class="server-number">05 / FFA</span>
-                    <h2>FFA</h2>
-                    <p>好きなキットを選んでPvP！ほかのプレイヤーとの対戦を楽しもう！</p>
+                    <h2 data-i18n="ffa_name">FFA</h2>
+                    <p data-i18n="ffa_desc">好きなキットを選んでPvP！ほかのプレイヤーとの対戦を楽しもう！</p>
                 </div>
             </article>
 
             <article class="server-card">
-                <img src="images/server-hardcore.png" alt="ハードコアサーバー">
+                <img src="images/server-hardcore.png" alt="ハードコアサーバー" data-i18n-alt="hardcore_name">
                 <div class="server-card-content">
                     <span class="server-number">06 / HARDCORE</span>
-                    <h2>ハードコア</h2>
-                    <p>高難易度のサバイバルに挑戦！緊張感のある冒険が待っている。</p>
+                    <h2 data-i18n="hardcore_name">ハードコア</h2>
+                    <p data-i18n="hardcore_desc">高難易度のサバイバルに挑戦！緊張感のある冒険が待っている。</p>
                 </div>
             </article>
 
@@ -101,9 +114,9 @@
     </section>
 
     <section class="servers-bottom">
-        <h2>さあ、冒険を始めよう。</h2>
-        <p>Negitoro Serverで、あなただけの楽しみ方を見つけよう。</p>
-        <a href="index.html#join" class="main-button">サーバーに参加する →</a>
+        <h2 data-i18n="servers_bottom_title">さあ、冒険を始めよう。</h2>
+        <p data-i18n="servers_bottom_desc">Negitoro Serverで、あなただけの楽しみ方を見つけよう。</p>
+        <a href="index.html#join" class="main-button" data-i18n="servers_bottom_button">サーバーに参加する →</a>
     </section>
 </main>
 
@@ -111,14 +124,342 @@
     <h3>🍣 Negitoro Server</h3>
     <p>© 2026 Negitoro Server</p>
 </footer>
-    <!-- Image Lightbox -->
+
+<!-- Image Lightbox -->
 <div id="image-lightbox">
-    <button id="lightbox-close" aria-label="閉じる">&times;</button>
-    <img src="" alt="拡大画像">
+    <button id="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="Expanded image">
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ========================================
+    // 翻訳データ
+    // ========================================
+
+    const translations = {
+        ja: {
+            nav_about: "サーバー紹介",
+            nav_features: "特徴",
+            nav_join: "参加方法",
+            nav_news: "お知らせ",
+            nav_guide: "ガイド",
+
+            servers_title: "それぞれの世界で、<br>自分だけの楽しみ方を。",
+            servers_subtitle: "Negitoro Serverで遊べる6つのサーバーを紹介！",
+
+            lobby_name: "ロビー",
+            lobby_desc: "Negitoro Serverの玄関口。各サーバーへの移動や案内はこちらから！",
+
+            economy_name: "経済",
+            economy_desc: "お金を稼いだり、買い物をしたり。経済の仕組みを楽しもう！",
+            economy_status: "リニューアル予定",
+
+            building_name: "建築",
+            building_desc: "自由な発想で建築を楽しもう。自分だけの作品を作り上げよう！",
+
+            survival_name: "サバイバル",
+            survival_desc: "冒険、採掘、生活。Minecraftならではのサバイバルを楽しもう！",
+
+            ffa_name: "FFA",
+            ffa_desc: "好きなキットを選んでPvP！ほかのプレイヤーとの対戦を楽しもう！",
+
+            hardcore_name: "ハードコア",
+            hardcore_desc: "高難易度のサバイバルに挑戦！緊張感のある冒険が待っている。",
+
+            servers_bottom_title: "さあ、冒険を始めよう。",
+            servers_bottom_desc: "Negitoro Serverで、あなただけの楽しみ方を見つけよう。",
+            servers_bottom_button: "サーバーに参加する →"
+        },
+
+        en: {
+            nav_about: "About",
+            nav_features: "Features",
+            nav_join: "How to Join",
+            nav_news: "News",
+            nav_guide: "Guide",
+
+            servers_title: "Explore different worlds,<br>and find your own way to play.",
+            servers_subtitle: "Discover the six servers available on Negitoro Server!",
+
+            lobby_name: "Lobby",
+            lobby_desc: "The gateway to Negitoro Server. Travel to other servers and find helpful information here!",
+
+            economy_name: "Economy",
+            economy_desc: "Earn money and go shopping. Enjoy the server's economy system!",
+            economy_status: "Coming Soon: Renewal",
+
+            building_name: "Building",
+            building_desc: "Build with your imagination. Create something truly your own!",
+
+            survival_name: "Survival",
+            survival_desc: "Explore, mine, and live your adventure. Enjoy classic Minecraft survival!",
+
+            ffa_name: "FFA",
+            ffa_desc: "Choose your favorite kit and enjoy PvP battles against other players!",
+
+            hardcore_name: "Hardcore",
+            hardcore_desc: "Take on a challenging survival experience. An exciting adventure awaits!",
+
+            servers_bottom_title: "Let the adventure begin.",
+            servers_bottom_desc: "Find your own way to enjoy Negitoro Server.",
+            servers_bottom_button: "Join the Server →"
+        },
+
+        ko: {
+            nav_about: "서버 소개",
+            nav_features: "특징",
+            nav_join: "참가 방법",
+            nav_news: "공지사항",
+            nav_guide: "가이드",
+
+            servers_title: "각각의 세계에서,<br>나만의 즐거움을 찾아보세요.",
+            servers_subtitle: "Negitoro Server에서 즐길 수 있는 6개의 서버를 소개합니다!",
+
+            lobby_name: "로비",
+            lobby_desc: "Negitoro Server의 입구입니다. 각 서버로 이동하거나 안내를 확인할 수 있습니다!",
+
+            economy_name: "경제",
+            economy_desc: "돈을 벌고 쇼핑도 해보세요. 경제 시스템을 즐겨보세요!",
+            economy_status: "리뉴얼 예정",
+
+            building_name: "건축",
+            building_desc: "자유로운 상상력으로 건축을 즐기고 나만의 작품을 만들어 보세요!",
+
+            survival_name: "서바이벌",
+            survival_desc: "모험, 채굴, 생활! Minecraft만의 서바이벌을 즐겨보세요!",
+
+            ffa_name: "FFA",
+            ffa_desc: "원하는 키트를 선택하고 다른 플레이어와 PvP를 즐겨보세요!",
+
+            hardcore_name: "하드코어",
+            hardcore_desc: "높은 난이도의 서바이벌에 도전하세요! 긴장감 넘치는 모험이 기다립니다.",
+
+            servers_bottom_title: "자, 모험을 시작해 보세요.",
+            servers_bottom_desc: "Negitoro Server에서 나만의 즐거움을 찾아보세요.",
+            servers_bottom_button: "서버 참가하기 →"
+        },
+
+        "zh-CN": {
+            nav_about: "服务器介绍",
+            nav_features: "特色",
+            nav_join: "加入方法",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            servers_title: "在不同的世界中，<br>找到属于自己的乐趣。",
+            servers_subtitle: "介绍 Negitoro Server 中可以游玩的六个服务器！",
+
+            lobby_name: "大厅",
+            lobby_desc: "Negitoro Server 的入口。在这里可以前往其他服务器并查看相关信息！",
+
+            economy_name: "经济",
+            economy_desc: "赚钱、购物，体验有趣的经济系统！",
+            economy_status: "即将翻新",
+
+            building_name: "建筑",
+            building_desc: "发挥想象力，享受建筑的乐趣，创造属于自己的作品！",
+
+            survival_name: "生存",
+            survival_desc: "冒险、采矿、生活！体验 Minecraft 独特的生存玩法！",
+
+            ffa_name: "FFA",
+            ffa_desc: "选择喜欢的装备，与其他玩家进行 PvP 对战！",
+
+            hardcore_name: "极限生存",
+            hardcore_desc: "挑战高难度生存！紧张刺激的冒险正在等待着你。",
+
+            servers_bottom_title: "开始你的冒险吧。",
+            servers_bottom_desc: "在 Negitoro Server 中找到属于自己的乐趣。",
+            servers_bottom_button: "加入服务器 →"
+        },
+
+        "zh-TW": {
+            nav_about: "伺服器介紹",
+            nav_features: "特色",
+            nav_join: "加入方式",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            servers_title: "在不同的世界中，<br>找到屬於自己的樂趣。",
+            servers_subtitle: "介紹 Negitoro Server 中可以遊玩的六個伺服器！",
+
+            lobby_name: "大廳",
+            lobby_desc: "Negitoro Server 的入口。在這裡可以前往其他伺服器並查看相關資訊！",
+
+            economy_name: "經濟",
+            economy_desc: "賺錢、購物，體驗有趣的經濟系統！",
+            economy_status: "即將翻新",
+
+            building_name: "建築",
+            building_desc: "發揮想像力，享受建築的樂趣，創造屬於自己的作品！",
+
+            survival_name: "生存",
+            survival_desc: "冒險、採礦、生活！體驗 Minecraft 獨特的生存玩法！",
+
+            ffa_name: "FFA",
+            ffa_desc: "選擇喜歡的裝備，與其他玩家進行 PvP 對戰！",
+
+            hardcore_name: "極限生存",
+            hardcore_desc: "挑戰高難度生存！緊張刺激的冒險正在等著你。",
+
+            servers_bottom_title: "開始你的冒險吧。",
+            servers_bottom_desc: "在 Negitoro Server 中找到屬於自己的樂趣。",
+            servers_bottom_button: "加入伺服器 →"
+        },
+
+        de: {
+            nav_about: "Über den Server",
+            nav_features: "Features",
+            nav_join: "Beitreten",
+            nav_news: "Neuigkeiten",
+            nav_guide: "Anleitung",
+
+            servers_title: "Entdecke verschiedene Welten<br>und finde deinen eigenen Spielstil.",
+            servers_subtitle: "Entdecke die sechs Server von Negitoro Server!",
+
+            lobby_name: "Lobby",
+            lobby_desc: "Das Tor zu Negitoro Server. Wechsle hier zwischen den Servern und finde Informationen!",
+
+            economy_name: "Wirtschaft",
+            economy_desc: "Verdiene Geld und kaufe ein. Entdecke unser Wirtschaftssystem!",
+            economy_status: "Überarbeitung geplant",
+
+            building_name: "Bauen",
+            building_desc: "Baue mit deiner Fantasie und erschaffe deine eigenen Werke!",
+
+            survival_name: "Survival",
+            survival_desc: "Erkunde, baue ab und lebe dein Abenteuer. Erlebe klassisches Minecraft-Survival!",
+
+            ffa_name: "FFA",
+            ffa_desc: "Wähle dein Lieblingskit und kämpfe im PvP gegen andere Spieler!",
+
+            hardcore_name: "Hardcore",
+            hardcore_desc: "Stelle dich einer anspruchsvollen Survival-Herausforderung!",
+
+            servers_bottom_title: "Das Abenteuer beginnt jetzt.",
+            servers_bottom_desc: "Finde deinen eigenen Spielstil auf Negitoro Server.",
+            servers_bottom_button: "Server beitreten →"
+        },
+
+        fr: {
+            nav_about: "À propos",
+            nav_features: "Fonctionnalités",
+            nav_join: "Comment rejoindre",
+            nav_news: "Actualités",
+            nav_guide: "Guide",
+
+            servers_title: "Explore différents mondes<br>et trouve ta propre façon de jouer.",
+            servers_subtitle: "Découvre les six serveurs disponibles sur Negitoro Server !",
+
+            lobby_name: "Lobby",
+            lobby_desc: "La porte d'entrée de Negitoro Server. Accède aux autres serveurs et consulte les informations ici !",
+
+            economy_name: "Économie",
+            economy_desc: "Gagne de l'argent et fais du shopping. Profite du système économique !",
+            economy_status: "Rénovation prévue",
+
+            building_name: "Construction",
+            building_desc: "Laisse libre cours à ton imagination et crée tes propres constructions !",
+
+            survival_name: "Survie",
+            survival_desc: "Explore, mine et vis ton aventure. Profite de la survie classique de Minecraft !",
+
+            ffa_name: "FFA",
+            ffa_desc: "Choisis ton kit préféré et affronte d'autres joueurs en PvP !",
+
+            hardcore_name: "Hardcore",
+            hardcore_desc: "Relève le défi d'une survie difficile ! Une aventure pleine de suspense t'attend.",
+
+            servers_bottom_title: "Que l'aventure commence.",
+            servers_bottom_desc: "Trouve ta propre façon de profiter de Negitoro Server.",
+            servers_bottom_button: "Rejoindre le serveur →"
+        }
+    };
+
+    // ========================================
+    // 言語設定
+    // ========================================
+
+    const languageSelect = document.getElementById("languageSelect");
+
+    function getInitialLanguage() {
+        const savedLanguage = localStorage.getItem("negitoro-language");
+
+        if (savedLanguage && translations[savedLanguage]) {
+            return savedLanguage;
+        }
+
+        const browserLanguage = navigator.language;
+
+        if (browserLanguage.startsWith("zh")) {
+            return browserLanguage.includes("TW") || browserLanguage.includes("HK")
+                ? "zh-TW"
+                : "zh-CN";
+        }
+
+        if (browserLanguage.startsWith("ko")) return "ko";
+        if (browserLanguage.startsWith("de")) return "de";
+        if (browserLanguage.startsWith("fr")) return "fr";
+        if (browserLanguage.startsWith("en")) return "en";
+
+        return "ja";
+    }
+
+    function applyLanguage(language) {
+        if (!translations[language]) {
+            language = "ja";
+        }
+
+        const t = translations[language];
+
+        document.documentElement.lang = language;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+            const key = element.dataset.i18n;
+
+            if (t[key]) {
+                element.innerHTML = t[key];
+            }
+        });
+
+        document.querySelectorAll("[data-i18n-alt]").forEach(element => {
+            const key = element.dataset.i18nAlt;
+
+            if (t[key]) {
+                element.alt = t[key];
+            }
+        });
+
+        document.title = {
+            ja: "サーバー紹介 - Negitoro Server",
+            en: "Our Servers - Negitoro Server",
+            ko: "서버 소개 - Negitoro Server",
+            "zh-CN": "服务器介绍 - Negitoro Server",
+            "zh-TW": "伺服器介紹 - Negitoro Server",
+            de: "Unsere Server - Negitoro Server",
+            fr: "Nos serveurs - Negitoro Server"
+        }[language];
+
+        localStorage.setItem("negitoro-language", language);
+
+        if (languageSelect) {
+            languageSelect.value = language;
+        }
+    }
+
+    const initialLanguage = getInitialLanguage();
+    applyLanguage(initialLanguage);
+
+    languageSelect.addEventListener("change", event => {
+        applyLanguage(event.target.value);
+    });
+
+    // ========================================
+    // Image Lightbox
+    // ========================================
+
     const lightbox = document.getElementById("image-lightbox");
     const lightboxImage = lightbox.querySelector("img");
     const closeButton = document.getElementById("lightbox-close");
@@ -155,6 +496,7 @@ document.addEventListener("DOMContentLoaded", () => {
             closeLightbox();
         }
     });
+
 });
 </script>
 
