@@ -26,16 +26,28 @@
     </a>
 
     <nav>
-        <a href="index.html#about">サーバー紹介</a>
-        <a href="index.html#features">特徴</a>
-        <a href="index.html#join">参加方法</a>
-        <a href="index.html#news">お知らせ</a>
-        <a href="guide.html">ガイド</a>
+        <a href="index.html#about" data-i18n="navAbout">サーバー紹介</a>
+        <a href="index.html#features" data-i18n="navFeatures">特徴</a>
+        <a href="index.html#join" data-i18n="navJoin">参加方法</a>
+        <a href="index.html#news" data-i18n="navNews">お知らせ</a>
+        <a href="guide.html" data-i18n="navGuide">ガイド</a>
     </nav>
 
-    <a href="index.html#join" class="header-button">
-        JOIN US ↗
-    </a>
+    <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="ko">한국어</option>
+            <option value="zh-CN">简体中文</option>
+            <option value="zh-TW">繁體中文</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+        </select>
+
+        <a href="index.html#join" class="header-button">
+            JOIN US ↗
+        </a>
+    </div>
 </header>
 
 <main>
@@ -44,9 +56,9 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">SERVER RULES</p>
-            <h1>サーバールール</h1>
+            <h1 data-i18n="pageTitle">サーバールール</h1>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="pageDescription">
                 Negitoro Serverを利用する前に、<br>
                 以下のルールを確認してください。
             </p>
@@ -57,15 +69,15 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">BASIC RULES</p>
-            <h2>基本ルール</h2>
+            <h2 data-i18n="basicTitle">基本ルール</h2>
         </div>
 
         <div class="about-grid">
 
             <div class="about-card">
                 <span>🤝</span>
-                <h3>相手を尊重する</h3>
-                <p>
+                <h3 data-i18n="respectTitle">相手を尊重する</h3>
+                <p data-i18n="respectDescription">
                     ほかのプレイヤーが嫌がる行為や、
                     迷惑になる発言はやめましょう。
                 </p>
@@ -73,8 +85,8 @@
 
             <div class="about-card">
                 <span>🚫</span>
-                <h3>迷惑行為の禁止</h3>
-                <p>
+                <h3 data-i18n="troubleTitle">迷惑行為の禁止</h3>
+                <p data-i18n="troubleDescription">
                     荒らしや嫌がらせなど、
                     サーバーの秩序を乱す行為は禁止です。
                 </p>
@@ -82,8 +94,8 @@
 
             <div class="about-card">
                 <span>⚖️</span>
-                <h3>公平にプレイする</h3>
-                <p>
+                <h3 data-i18n="fairTitle">公平にプレイする</h3>
+                <p data-i18n="fairDescription">
                     不正なツールや不具合の悪用など、
                     不公平になる行為は禁止です。
                 </p>
@@ -91,8 +103,8 @@
 
             <div class="about-card">
                 <span>💬</span>
-                <h3>チャットマナー</h3>
-                <p>
+                <h3 data-i18n="chatTitle">チャットマナー</h3>
+                <p data-i18n="chatDescription">
                     暴言や過度な迷惑発言を避け、
                     お互いに気持ちよく交流しましょう。
                 </p>
@@ -105,15 +117,15 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">GAMEPLAY RULES</p>
-            <h2>プレイ時のルール</h2>
+            <h2 data-i18n="gameplayTitle">プレイ時のルール</h2>
         </div>
 
         <div class="about-grid">
 
             <div class="about-card">
                 <span>🏯</span>
-                <h3>建築物を大切に</h3>
-                <p>
+                <h3 data-i18n="buildingTitle">建築物を大切に</h3>
+                <p data-i18n="buildingDescription">
                     他人の建築物を許可なく破壊したり、
                     荒らしたりしないでください。
                 </p>
@@ -121,8 +133,8 @@
 
             <div class="about-card">
                 <span>📦</span>
-                <h3>アイテムの取り扱い</h3>
-                <p>
+                <h3 data-i18n="itemsTitle">アイテムの取り扱い</h3>
+                <p data-i18n="itemsDescription">
                     他人のチェストや所有物を、
                     許可なく持ち去らないでください。
                 </p>
@@ -130,8 +142,8 @@
 
             <div class="about-card">
                 <span>🛠️</span>
-                <h3>不具合の悪用禁止</h3>
-                <p>
+                <h3 data-i18n="bugsTitle">不具合の悪用禁止</h3>
+                <p data-i18n="bugsDescription">
                     ゲームやサーバーの不具合を
                     意図的に悪用しないでください。
                 </p>
@@ -139,8 +151,8 @@
 
             <div class="about-card">
                 <span>📢</span>
-                <h3>運営の案内に従う</h3>
-                <p>
+                <h3 data-i18n="staffTitle">運営の案内に従う</h3>
+                <p data-i18n="staffDescription">
                     サーバー運営からの案内や
                     注意事項を確認しましょう。
                 </p>
@@ -153,9 +165,9 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">IMPORTANT</p>
-            <h2>最後に</h2>
+            <h2 data-i18n="importantTitle">最後に</h2>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="importantDescription">
                 ルールに違反した場合、内容に応じて
                 注意や利用制限などの対応を行うことがあります。<br><br>
                 みんなで楽しいサーバーを作っていきましょう！
@@ -166,13 +178,13 @@
     <!-- 戻る -->
     <section class="section">
         <div class="about-heading">
-            <a href="commands.html" class="main-button">
+            <a href="commands.html" class="main-button" data-i18n="commandsButton">
                 コマンドを見る →
             </a>
 
             <br>
 
-            <a href="guide.html" class="main-button">
+            <a href="guide.html" class="main-button" data-i18n="guideButton">
                 ガイド一覧へ戻る →
             </a>
         </div>
@@ -183,6 +195,299 @@
 <footer class="footer">
     <p>© Negitoro Server. All Rights Reserved.</p>
 </footer>
+
+<script>
+const translations = {
+    ja: {
+        title: "ルール | Negitoro Server",
+        description: "Negitoro Serverのサーバールール",
+        navAbout: "サーバー紹介",
+        navFeatures: "特徴",
+        navJoin: "参加方法",
+        navNews: "お知らせ",
+        navGuide: "ガイド",
+        pageTitle: "サーバールール",
+        pageDescription: "Negitoro Serverを利用する前に、<br>以下のルールを確認してください。",
+        basicTitle: "基本ルール",
+        respectTitle: "相手を尊重する",
+        respectDescription: "ほかのプレイヤーが嫌がる行為や、<br>迷惑になる発言はやめましょう。",
+        troubleTitle: "迷惑行為の禁止",
+        troubleDescription: "荒らしや嫌がらせなど、<br>サーバーの秩序を乱す行為は禁止です。",
+        fairTitle: "公平にプレイする",
+        fairDescription: "不正なツールや不具合の悪用など、<br>不公平になる行為は禁止です。",
+        chatTitle: "チャットマナー",
+        chatDescription: "暴言や過度な迷惑発言を避け、<br>お互いに気持ちよく交流しましょう。",
+        gameplayTitle: "プレイ時のルール",
+        buildingTitle: "建築物を大切に",
+        buildingDescription: "他人の建築物を許可なく破壊したり、<br>荒らしたりしないでください。",
+        itemsTitle: "アイテムの取り扱い",
+        itemsDescription: "他人のチェストや所有物を、<br>許可なく持ち去らないでください。",
+        bugsTitle: "不具合の悪用禁止",
+        bugsDescription: "ゲームやサーバーの不具合を<br>意図的に悪用しないでください。",
+        staffTitle: "運営の案内に従う",
+        staffDescription: "サーバー運営からの案内や<br>注意事項を確認しましょう。",
+        importantTitle: "最後に",
+        importantDescription: "ルールに違反した場合、内容に応じて<br>注意や利用制限などの対応を行うことがあります。<br><br>みんなで楽しいサーバーを作っていきましょう！",
+        commandsButton: "コマンドを見る →",
+        guideButton: "ガイド一覧へ戻る →"
+    },
+
+    en: {
+        title: "Rules | Negitoro Server",
+        description: "Server rules for Negitoro Server.",
+        navAbout: "About",
+        navFeatures: "Features",
+        navJoin: "How to Join",
+        navNews: "News",
+        navGuide: "Guide",
+        pageTitle: "Server Rules",
+        pageDescription: "Before playing on Negitoro Server,<br>please read the following rules.",
+        basicTitle: "Basic Rules",
+        respectTitle: "Respect Others",
+        respectDescription: "Do not do things that make other players uncomfortable<br>or say things that disturb them.",
+        troubleTitle: "No Disruptive Behavior",
+        troubleDescription: "Griefing, harassment, and other actions<br>that disrupt the server are prohibited.",
+        fairTitle: "Play Fairly",
+        fairDescription: "Cheating tools and exploiting bugs<br>to gain an unfair advantage are prohibited.",
+        chatTitle: "Chat Etiquette",
+        chatDescription: "Avoid abusive language and excessive disruptive messages.<br>Be considerate when communicating with others.",
+        gameplayTitle: "Gameplay Rules",
+        buildingTitle: "Respect Builds",
+        buildingDescription: "Do not destroy or grief<br>other players' builds without permission.",
+        itemsTitle: "Respect Other Players' Items",
+        itemsDescription: "Do not take items from other players' chests<br>or belongings without permission.",
+        bugsTitle: "Do Not Exploit Bugs",
+        bugsDescription: "Do not intentionally exploit<br>bugs in the game or server.",
+        staffTitle: "Follow Staff Instructions",
+        staffDescription: "Please check announcements and<br>instructions from the server staff.",
+        importantTitle: "Important",
+        importantDescription: "Rule violations may result in warnings<br>or restrictions depending on the situation.<br><br>Let's work together to make this a fun server!",
+        commandsButton: "View Commands →",
+        guideButton: "Back to Guide →"
+    },
+
+    ko: {
+        title: "규칙 | Negitoro Server",
+        description: "Negitoro Server의 서버 규칙",
+        navAbout: "서버 소개",
+        navFeatures: "특징",
+        navJoin: "참가 방법",
+        navNews: "공지사항",
+        navGuide: "가이드",
+        pageTitle: "서버 규칙",
+        pageDescription: "Negitoro Server를 이용하기 전에<br>다음 규칙을 확인해 주세요.",
+        basicTitle: "기본 규칙",
+        respectTitle: "서로 존중하기",
+        respectDescription: "다른 플레이어가 싫어하는 행동이나<br>불쾌감을 주는 발언은 삼가 주세요.",
+        troubleTitle: "방해 행위 금지",
+        troubleDescription: "그리핑이나 괴롭힘 등<br>서버 질서를 어지럽히는 행위는 금지됩니다.",
+        fairTitle: "공정하게 플레이하기",
+        fairDescription: "부정한 도구 사용이나 버그 악용 등<br>불공정한 행위는 금지됩니다.",
+        chatTitle: "채팅 예절",
+        chatDescription: "욕설이나 지나친 방해 발언을 피하고<br>서로 기분 좋게 소통해 주세요.",
+        gameplayTitle: "플레이 규칙",
+        buildingTitle: "건축물 소중히 하기",
+        buildingDescription: "다른 사람의 건축물을 허락 없이 파괴하거나<br>그리핑하지 마세요.",
+        itemsTitle: "아이템 취급",
+        itemsDescription: "다른 사람의 상자나 소유물을<br>허락 없이 가져가지 마세요.",
+        bugsTitle: "버그 악용 금지",
+        bugsDescription: "게임이나 서버의 버그를<br>의도적으로 악용하지 마세요.",
+        staffTitle: "운영진 안내 따르기",
+        staffDescription: "서버 운영진의 공지와<br>안내 사항을 확인해 주세요.",
+        importantTitle: "마지막으로",
+        importantDescription: "규칙을 위반하면 상황에 따라<br>경고나 이용 제한 등의 조치가 있을 수 있습니다.<br><br>모두 함께 즐거운 서버를 만들어 갑시다!",
+        commandsButton: "명령어 보기 →",
+        guideButton: "가이드 목록으로 돌아가기 →"
+    },
+
+    "zh-CN": {
+        title: "服务器规则 | Negitoro Server",
+        description: "Negitoro Server的服务器规则",
+        navAbout: "服务器介绍",
+        navFeatures: "特色",
+        navJoin: "加入方法",
+        navNews: "公告",
+        navGuide: "指南",
+        pageTitle: "服务器规则",
+        pageDescription: "在使用 Negitoro Server 之前，<br>请确认以下规则。",
+        basicTitle: "基本规则",
+        respectTitle: "尊重他人",
+        respectDescription: "请不要做让其他玩家感到不舒服的事情，<br>也不要发表造成困扰的言论。",
+        troubleTitle: "禁止骚扰行为",
+        troubleDescription: "禁止破坏、骚扰等<br>扰乱服务器秩序的行为。",
+        fairTitle: "公平游戏",
+        fairDescription: "禁止使用作弊工具或利用漏洞<br>进行不公平的游戏行为。",
+        chatTitle: "聊天礼仪",
+        chatDescription: "避免辱骂和过度骚扰性的发言，<br>友善地与其他玩家交流。",
+        gameplayTitle: "游戏规则",
+        buildingTitle: "爱护建筑",
+        buildingDescription: "未经允许，不得破坏或恶意破坏<br>其他玩家的建筑。",
+        itemsTitle: "妥善处理物品",
+        itemsDescription: "未经允许，不得拿走<br>其他玩家箱子中的物品或个人财物。",
+        bugsTitle: "禁止利用漏洞",
+        bugsDescription: "请勿故意利用<br>游戏或服务器中的漏洞。",
+        staffTitle: "遵守管理团队的指示",
+        staffDescription: "请留意服务器管理团队发布的公告<br>和注意事项。",
+        importantTitle: "最后提醒",
+        importantDescription: "违反规则时，可能会根据情况<br>受到警告或使用限制等处理。<br><br>让我们一起打造一个愉快的服务器吧！",
+        commandsButton: "查看指令 →",
+        guideButton: "返回指南列表 →"
+    },
+
+    "zh-TW": {
+        title: "伺服器規則 | Negitoro Server",
+        description: "Negitoro Server 的伺服器規則",
+        navAbout: "伺服器介紹",
+        navFeatures: "特色",
+        navJoin: "加入方式",
+        navNews: "公告",
+        navGuide: "指南",
+        pageTitle: "伺服器規則",
+        pageDescription: "使用 Negitoro Server 之前，<br>請先確認以下規則。",
+        basicTitle: "基本規則",
+        respectTitle: "尊重他人",
+        respectDescription: "請不要做出讓其他玩家感到不舒服的行為，<br>也不要發表造成困擾的言論。",
+        troubleTitle: "禁止騷擾行為",
+        troubleDescription: "禁止破壞、騷擾等<br>擾亂伺服器秩序的行為。",
+        fairTitle: "公平遊玩",
+        fairDescription: "禁止使用作弊工具或利用漏洞<br>進行不公平的遊戲行為。",
+        chatTitle: "聊天禮儀",
+        chatDescription: "避免辱罵和過度騷擾性的發言，<br>友善地與其他玩家交流。",
+        gameplayTitle: "遊戲規則",
+        buildingTitle: "愛護建築",
+        buildingDescription: "未經允許，不得破壞或惡意破壞<br>其他玩家的建築。",
+        itemsTitle: "妥善處理物品",
+        itemsDescription: "未經允許，不得拿走<br>其他玩家箱子中的物品或個人物品。",
+        bugsTitle: "禁止利用漏洞",
+        bugsDescription: "請勿故意利用<br>遊戲或伺服器中的漏洞。",
+        staffTitle: "遵守管理團隊的指示",
+        staffDescription: "請留意伺服器管理團隊發布的公告<br>和注意事項。",
+        importantTitle: "最後提醒",
+        importantDescription: "違反規則時，可能會依照情況<br>受到警告或使用限制等處分。<br><br>讓我們一起打造一個愉快的伺服器吧！",
+        commandsButton: "查看指令 →",
+        guideButton: "返回指南列表 →"
+    },
+
+    de: {
+        title: "Regeln | Negitoro Server",
+        description: "Die Serverregeln des Negitoro Servers.",
+        navAbout: "Über den Server",
+        navFeatures: "Features",
+        navJoin: "Beitreten",
+        navNews: "Neuigkeiten",
+        navGuide: "Guide",
+        pageTitle: "Serverregeln",
+        pageDescription: "Bitte lies die folgenden Regeln,<br>bevor du auf dem Negitoro Server spielst.",
+        basicTitle: "Grundregeln",
+        respectTitle: "Respektiere andere",
+        respectDescription: "Verhalte dich so, dass sich andere Spieler wohlfühlen,<br>und vermeide störende Äußerungen.",
+        troubleTitle: "Kein störendes Verhalten",
+        troubleDescription: "Griefing, Belästigung und andere Handlungen,<br>die den Server stören, sind verboten.",
+        fairTitle: "Spiele fair",
+        fairDescription: "Cheat-Tools und das Ausnutzen von Fehlern<br>für unfaire Vorteile sind verboten.",
+        chatTitle: "Chat-Etikette",
+        chatDescription: "Vermeide Beleidigungen und übermäßige Störungen.<br>Gehe respektvoll mit anderen um.",
+        gameplayTitle: "Spielregeln",
+        buildingTitle: "Respektiere Bauwerke",
+        buildingDescription: "Zerstöre oder beschädige keine Bauwerke anderer Spieler<br>ohne deren Erlaubnis.",
+        itemsTitle: "Respektiere fremde Gegenstände",
+        itemsDescription: "Nimm keine Gegenstände aus fremden Truhen<br>oder anderen Besitztümern ohne Erlaubnis.",
+        bugsTitle: "Keine Ausnutzung von Fehlern",
+        bugsDescription: "Nutze Fehler im Spiel oder auf dem Server<br>nicht absichtlich aus.",
+        staffTitle: "Anweisungen des Teams befolgen",
+        staffDescription: "Beachte die Ankündigungen und Hinweise<br>des Serverteams.",
+        importantTitle: "Zum Schluss",
+        importantDescription: "Verstöße gegen die Regeln können je nach Situation<br>zu Verwarnungen oder Einschränkungen führen.<br><br>Lasst uns gemeinsam einen tollen Server gestalten!",
+        commandsButton: "Befehle ansehen →",
+        guideButton: "Zurück zur Guide-Übersicht →"
+    },
+
+    fr: {
+        title: "Règlement | Negitoro Server",
+        description: "Le règlement du serveur Negitoro Server.",
+        navAbout: "À propos",
+        navFeatures: "Fonctionnalités",
+        navJoin: "Rejoindre",
+        navNews: "Actualités",
+        navGuide: "Guide",
+        pageTitle: "Règlement du serveur",
+        pageDescription: "Avant de jouer sur Negitoro Server,<br>veuillez lire les règles suivantes.",
+        basicTitle: "Règles de base",
+        respectTitle: "Respecter les autres",
+        respectDescription: "Évitez les comportements qui dérangent les autres joueurs<br>et les propos qui peuvent les gêner.",
+        troubleTitle: "Comportements perturbateurs interdits",
+        troubleDescription: "Le grief, le harcèlement et les actions<br>qui perturbent le serveur sont interdits.",
+        fairTitle: "Jouer équitablement",
+        fairDescription: "Les outils de triche et l'exploitation de bugs<br>pour obtenir un avantage injuste sont interdits.",
+        chatTitle: "Respect du chat",
+        chatDescription: "Évitez les insultes et les messages excessivement gênants.<br>Communiquez avec respect.",
+        gameplayTitle: "Règles de jeu",
+        buildingTitle: "Respecter les constructions",
+        buildingDescription: "Ne détruisez pas et ne détériorez pas<br>les constructions d'autres joueurs sans permission.",
+        itemsTitle: "Respecter les objets des autres",
+        itemsDescription: "Ne prenez pas les objets dans les coffres<br>ou les biens d'autres joueurs sans autorisation.",
+        bugsTitle: "Ne pas exploiter les bugs",
+        bugsDescription: "N'exploitez pas intentionnellement<br>les bugs du jeu ou du serveur.",
+        staffTitle: "Suivre les consignes du staff",
+        staffDescription: "Veuillez consulter les annonces et les consignes<br>de l'équipe du serveur.",
+        importantTitle: "Pour finir",
+        importantDescription: "Toute infraction peut entraîner, selon la situation,<br>un avertissement ou une restriction d'accès.<br><br>Construisons ensemble un serveur agréable pour tous !",
+        commandsButton: "Voir les commandes →",
+        guideButton: "Retour au guide →"
+    }
+};
+
+function applyLanguage(language) {
+    const selected = translations[language] ? language : "ja";
+    const texts = translations[selected];
+
+    document.documentElement.lang = selected;
+    document.title = texts.title;
+
+    document.querySelector('meta[name="description"]')
+        .setAttribute("content", texts.description);
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.dataset.i18n;
+
+        if (texts[key] !== undefined) {
+            element.innerHTML = texts[key];
+        }
+    });
+
+    document.getElementById("languageSelect").value = selected;
+    localStorage.setItem("negitoro-language", selected);
+}
+
+function getInitialLanguage() {
+    const saved = localStorage.getItem("negitoro-language");
+
+    if (saved && translations[saved]) {
+        return saved;
+    }
+
+    const browserLanguage = navigator.language || "ja";
+
+    if (browserLanguage.startsWith("zh")) {
+        return browserLanguage.includes("TW") ||
+               browserLanguage.includes("HK")
+            ? "zh-TW"
+            : "zh-CN";
+    }
+
+    const language = browserLanguage.split("-")[0];
+
+    return translations[language] ? language : "ja";
+}
+
+const languageSelect = document.getElementById("languageSelect");
+
+languageSelect.addEventListener("change", event => {
+    applyLanguage(event.target.value);
+});
+
+applyLanguage(getInitialLanguage());
+</script>
 
 </body>
 </html>
