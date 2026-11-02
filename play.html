@@ -26,16 +26,28 @@
     </a>
 
     <nav>
-        <a href="index.html#about">サーバー紹介</a>
-        <a href="index.html#features">特徴</a>
-        <a href="index.html#join">参加方法</a>
-        <a href="index.html#news">お知らせ</a>
-        <a href="guide.html">ガイド</a>
+        <a href="index.html#about" data-i18n="navAbout">サーバー紹介</a>
+        <a href="index.html#features" data-i18n="navFeatures">特徴</a>
+        <a href="index.html#join" data-i18n="navJoin">参加方法</a>
+        <a href="index.html#news" data-i18n="navNews">お知らせ</a>
+        <a href="guide.html" data-i18n="navGuide">ガイド</a>
     </nav>
 
-    <a href="index.html#join" class="header-button">
-        JOIN US ↗
-    </a>
+    <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="ko">한국어</option>
+            <option value="zh-CN">简体中文</option>
+            <option value="zh-TW">繁體中文</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+        </select>
+
+        <a href="index.html#join" class="header-button">
+            JOIN US ↗
+        </a>
+    </div>
 </header>
 
 <main>
@@ -44,9 +56,9 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">HOW TO PLAY</p>
-            <h1>遊び方</h1>
+            <h1 data-i18n="pageTitle">遊び方</h1>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="pageDescription">
                 Negitoro Serverには、さまざまな楽しみ方があります。<br>
                 あなたに合った遊び方を見つけてみよう！
             </p>
@@ -57,15 +69,15 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">CONTENTS</p>
-            <h2>楽しみ方いろいろ。</h2>
+            <h2 data-i18n="contentsTitle">楽しみ方いろいろ。</h2>
         </div>
 
         <div class="about-grid">
 
             <div class="about-card">
                 <span>⚔️</span>
-                <h3>冒険する</h3>
-                <p>
+                <h3 data-i18n="adventureTitle">冒険する</h3>
+                <p data-i18n="adventureDescription">
                     広い世界を探索して、<br>
                     自分だけの冒険を楽しもう。
                 </p>
@@ -73,8 +85,8 @@
 
             <div class="about-card">
                 <span>🏯</span>
-                <h3>建築する</h3>
-                <p>
+                <h3 data-i18n="buildTitle">建築する</h3>
+                <p data-i18n="buildDescription">
                     自由な発想で建物や街を作り、<br>
                     世界を彩ろう。
                 </p>
@@ -82,8 +94,8 @@
 
             <div class="about-card">
                 <span>🤝</span>
-                <h3>交流する</h3>
-                <p>
+                <h3 data-i18n="socialTitle">交流する</h3>
+                <p data-i18n="socialDescription">
                     ほかのプレイヤーと協力して、<br>
                     一緒にMinecraftを楽しもう。
                 </p>
@@ -91,8 +103,8 @@
 
             <div class="about-card">
                 <span>🌸</span>
-                <h3>自由に遊ぶ</h3>
-                <p>
+                <h3 data-i18n="freeTitle">自由に遊ぶ</h3>
+                <p data-i18n="freeDescription">
                     決まった遊び方に縛られず、<br>
                     自分らしい楽しみ方を見つけよう。
                 </p>
@@ -105,9 +117,9 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">YOUR ADVENTURE</p>
-            <h2>楽しみ方は無限大。</h2>
+            <h2 data-i18n="adventureHeading">楽しみ方は無限大。</h2>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="adventureDescription2">
                 一人でも、仲間と一緒でも。<br>
                 Negitoro Serverで新しい思い出を作ろう！
             </p>
@@ -118,20 +130,20 @@
     <section class="section">
         <div class="about-heading">
             <p class="section-label">NEXT STEP</p>
-            <h2>ルールを確認しよう。</h2>
+            <h2 data-i18n="nextTitle">ルールを確認しよう。</h2>
 
-            <p class="about-description">
+            <p class="about-description" data-i18n="nextDescription">
                 みんなが楽しく遊べるように、<br>
                 サーバーのルールを確認してね。
             </p>
 
-            <a href="rules.html" class="main-button">
+            <a href="rules.html" class="main-button" data-i18n="rulesButton">
                 ルールを見る →
             </a>
 
             <br>
 
-            <a href="guide.html" class="main-button">
+            <a href="guide.html" class="main-button" data-i18n="guideButton">
                 ガイド一覧へ戻る →
             </a>
         </div>
@@ -142,6 +154,250 @@
 <footer class="footer">
     <p>© Negitoro Server. All Rights Reserved.</p>
 </footer>
+
+<script>
+const translations = {
+    ja: {
+        title: "遊び方 | Negitoro Server",
+        description: "Negitoro Serverで楽しめる遊び方を紹介します。",
+        navAbout: "サーバー紹介",
+        navFeatures: "特徴",
+        navJoin: "参加方法",
+        navNews: "お知らせ",
+        navGuide: "ガイド",
+        pageTitle: "遊び方",
+        pageDescription: "Negitoro Serverには、さまざまな楽しみ方があります。<br>あなたに合った遊び方を見つけてみよう！",
+        contentsTitle: "楽しみ方いろいろ。",
+        adventureTitle: "冒険する",
+        adventureDescription: "広い世界を探索して、<br>自分だけの冒険を楽しもう。",
+        buildTitle: "建築する",
+        buildDescription: "自由な発想で建物や街を作り、<br>世界を彩ろう。",
+        socialTitle: "交流する",
+        socialDescription: "ほかのプレイヤーと協力して、<br>一緒にMinecraftを楽しもう。",
+        freeTitle: "自由に遊ぶ",
+        freeDescription: "決まった遊び方に縛られず、<br>自分らしい楽しみ方を見つけよう。",
+        adventureHeading: "楽しみ方は無限大。",
+        adventureDescription2: "一人でも、仲間と一緒でも。<br>Negitoro Serverで新しい思い出を作ろう！",
+        nextTitle: "ルールを確認しよう。",
+        nextDescription: "みんなが楽しく遊べるように、<br>サーバーのルールを確認してね。",
+        rulesButton: "ルールを見る →",
+        guideButton: "ガイド一覧へ戻る →"
+    },
+
+    en: {
+        title: "How to Play | Negitoro Server",
+        description: "Discover the different ways to enjoy Negitoro Server.",
+        navAbout: "About",
+        navFeatures: "Features",
+        navJoin: "How to Join",
+        navNews: "News",
+        navGuide: "Guide",
+        pageTitle: "How to Play",
+        pageDescription: "There are many ways to enjoy Negitoro Server.<br>Find the play style that suits you!",
+        contentsTitle: "Many Ways to Have Fun.",
+        adventureTitle: "Explore",
+        adventureDescription: "Explore the vast world and<br>enjoy your own adventures.",
+        buildTitle: "Build",
+        buildDescription: "Create buildings and towns with your imagination<br>and add color to the world.",
+        socialTitle: "Connect",
+        socialDescription: "Team up with other players<br>and enjoy Minecraft together.",
+        freeTitle: "Play Freely",
+        freeDescription: "Don't be limited by one play style.<br>Find your own way to have fun.",
+        adventureHeading: "Endless Possibilities.",
+        adventureDescription2: "Whether alone or with friends,<br>make new memories on Negitoro Server!",
+        nextTitle: "Check the Rules.",
+        nextDescription: "To make sure everyone has fun,<br>please check the server rules.",
+        rulesButton: "View Rules →",
+        guideButton: "Back to Guide →"
+    },
+
+    ko: {
+        title: "플레이 방법 | Negitoro Server",
+        description: "Negitoro Server에서 즐길 수 있는 다양한 방법을 소개합니다.",
+        navAbout: "서버 소개",
+        navFeatures: "특징",
+        navJoin: "참가 방법",
+        navNews: "공지사항",
+        navGuide: "가이드",
+        pageTitle: "플레이 방법",
+        pageDescription: "Negitoro Server에는 다양한 즐길 거리가 있습니다.<br>자신에게 맞는 플레이 스타일을 찾아보세요!",
+        contentsTitle: "다양한 즐길 거리.",
+        adventureTitle: "모험하기",
+        adventureDescription: "넓은 세계를 탐험하며<br>나만의 모험을 즐겨보세요.",
+        buildTitle: "건축하기",
+        buildDescription: "자유로운 상상력으로 건물과 마을을 만들고<br>세상을 아름답게 꾸며보세요.",
+        socialTitle: "교류하기",
+        socialDescription: "다른 플레이어와 협력하며<br>함께 Minecraft를 즐겨보세요.",
+        freeTitle: "자유롭게 즐기기",
+        freeDescription: "정해진 방식에 얽매이지 말고<br>나만의 즐기는 방법을 찾아보세요.",
+        adventureHeading: "즐기는 방법은 무궁무진합니다.",
+        adventureDescription2: "혼자서도, 친구들과 함께도.<br>Negitoro Server에서 새로운 추억을 만들어 보세요!",
+        nextTitle: "규칙을 확인해 보세요.",
+        nextDescription: "모두가 즐겁게 플레이할 수 있도록<br>서버 규칙을 확인해 주세요.",
+        rulesButton: "규칙 보기 →",
+        guideButton: "가이드 목록으로 돌아가기 →"
+    },
+
+    "zh-CN": {
+        title: "游玩方式 | Negitoro Server",
+        description: "介绍在 Negitoro Server 中可以体验的各种玩法。",
+        navAbout: "服务器介绍",
+        navFeatures: "特色",
+        navJoin: "加入方法",
+        navNews: "公告",
+        navGuide: "指南",
+        pageTitle: "游玩方式",
+        pageDescription: "Negitoro Server 有各种各样的玩法。<br>找到适合自己的游玩方式吧！",
+        contentsTitle: "丰富多彩的玩法。",
+        adventureTitle: "冒险探索",
+        adventureDescription: "探索广阔的世界，<br>享受属于自己的冒险。",
+        buildTitle: "建筑创造",
+        buildDescription: "发挥想象力建造建筑和城镇，<br>为世界增添色彩。",
+        socialTitle: "交流互动",
+        socialDescription: "与其他玩家合作，<br>一起享受 Minecraft。",
+        freeTitle: "自由游玩",
+        freeDescription: "不受固定玩法的限制，<br>寻找属于自己的乐趣。",
+        adventureHeading: "乐趣无限。",
+        adventureDescription2: "无论独自一人还是与朋友一起，<br>都来 Negitoro Server 创造新的回忆吧！",
+        nextTitle: "查看服务器规则。",
+        nextDescription: "为了让大家都能愉快地游玩，<br>请确认服务器规则。",
+        rulesButton: "查看规则 →",
+        guideButton: "返回指南列表 →"
+    },
+
+    "zh-TW": {
+        title: "遊玩方式 | Negitoro Server",
+        description: "介紹在 Negitoro Server 中可以體驗的各種玩法。",
+        navAbout: "伺服器介紹",
+        navFeatures: "特色",
+        navJoin: "加入方式",
+        navNews: "公告",
+        navGuide: "指南",
+        pageTitle: "遊玩方式",
+        pageDescription: "Negitoro Server 有各式各樣的玩法。<br>找出適合自己的遊玩方式吧！",
+        contentsTitle: "豐富多彩的玩法。",
+        adventureTitle: "冒險探索",
+        adventureDescription: "探索廣闊的世界，<br>享受屬於自己的冒險。",
+        buildTitle: "建築創作",
+        buildDescription: "發揮想像力建造建築與城鎮，<br>為世界增添色彩。",
+        socialTitle: "交流互動",
+        socialDescription: "與其他玩家合作，<br>一起享受 Minecraft。",
+        freeTitle: "自由遊玩",
+        freeDescription: "不受固定玩法限制，<br>尋找屬於自己的樂趣。",
+        adventureHeading: "樂趣無限。",
+        adventureDescription2: "無論獨自一人或與朋友一起，<br>都來 Negitoro Server 創造新的回憶吧！",
+        nextTitle: "確認伺服器規則。",
+        nextDescription: "為了讓大家都能愉快地遊玩，<br>請確認伺服器規則。",
+        rulesButton: "查看規則 →",
+        guideButton: "返回指南列表 →"
+    },
+
+    de: {
+        title: "Spielanleitung | Negitoro Server",
+        description: "Entdecke die verschiedenen Spielmöglichkeiten auf dem Negitoro Server.",
+        navAbout: "Über den Server",
+        navFeatures: "Features",
+        navJoin: "Beitreten",
+        navNews: "Neuigkeiten",
+        navGuide: "Guide",
+        pageTitle: "Spielanleitung",
+        pageDescription: "Auf dem Negitoro Server gibt es viele Möglichkeiten, Spaß zu haben.<br>Finde deinen eigenen Spielstil!",
+        contentsTitle: "Viele Möglichkeiten.",
+        adventureTitle: "Abenteuer erleben",
+        adventureDescription: "Erkunde die weite Welt und<br>erlebe deine eigenen Abenteuer.",
+        buildTitle: "Bauen",
+        buildDescription: "Erschaffe Gebäude und Städte mit deiner Fantasie<br>und gestalte die Welt.",
+        socialTitle: "Gemeinsam spielen",
+        socialDescription: "Arbeite mit anderen Spielern zusammen<br>und genieße Minecraft gemeinsam.",
+        freeTitle: "Frei spielen",
+        freeDescription: "Lass dich nicht auf einen Spielstil festlegen.<br>Finde deinen eigenen Spaß.",
+        adventureHeading: "Unendliche Möglichkeiten.",
+        adventureDescription2: "Ob allein oder mit Freunden:<br>Erlebe neue Abenteuer auf dem Negitoro Server!",
+        nextTitle: "Regeln ansehen.",
+        nextDescription: "Damit alle Spaß haben können,<br>lies bitte die Serverregeln.",
+        rulesButton: "Regeln ansehen →",
+        guideButton: "Zurück zur Guide-Übersicht →"
+    },
+
+    fr: {
+        title: "Comment jouer | Negitoro Server",
+        description: "Découvrez les différentes façons de profiter de Negitoro Server.",
+        navAbout: "À propos",
+        navFeatures: "Fonctionnalités",
+        navJoin: "Rejoindre",
+        navNews: "Actualités",
+        navGuide: "Guide",
+        pageTitle: "Comment jouer",
+        pageDescription: "Negitoro Server propose de nombreuses façons de s'amuser.<br>Trouvez le style de jeu qui vous correspond !",
+        contentsTitle: "De nombreuses possibilités.",
+        adventureTitle: "Explorer",
+        adventureDescription: "Explorez un vaste monde et<br>vivez vos propres aventures.",
+        buildTitle: "Construire",
+        buildDescription: "Créez des bâtiments et des villes selon votre imagination<br>et embellissez le monde.",
+        socialTitle: "Échanger",
+        socialDescription: "Coopérez avec d'autres joueurs<br>et profitez de Minecraft ensemble.",
+        freeTitle: "Jouer librement",
+        freeDescription: "Ne vous limitez pas à une seule façon de jouer.<br>Trouvez votre propre plaisir.",
+        adventureHeading: "Des possibilités infinies.",
+        adventureDescription2: "Seul ou avec des amis,<br>créez de nouveaux souvenirs sur Negitoro Server !",
+        nextTitle: "Consultez les règles.",
+        nextDescription: "Pour que tout le monde puisse s'amuser,<br>veuillez consulter les règles du serveur.",
+        rulesButton: "Voir les règles →",
+        guideButton: "Retour au guide →"
+    }
+};
+
+function applyLanguage(language) {
+    const selected = translations[language] ? language : "ja";
+    const texts = translations[selected];
+
+    document.documentElement.lang = selected;
+    document.title = texts.title;
+
+    document.querySelector('meta[name="description"]')
+        .setAttribute("content", texts.description);
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.dataset.i18n;
+
+        if (texts[key] !== undefined) {
+            element.innerHTML = texts[key];
+        }
+    });
+
+    document.getElementById("languageSelect").value = selected;
+    localStorage.setItem("negitoro-language", selected);
+}
+
+function getInitialLanguage() {
+    const saved = localStorage.getItem("negitoro-language");
+
+    if (saved && translations[saved]) {
+        return saved;
+    }
+
+    const browserLanguage = navigator.language || "ja";
+
+    if (browserLanguage.startsWith("zh")) {
+        return browserLanguage.includes("TW") ||
+               browserLanguage.includes("HK")
+            ? "zh-TW"
+            : "zh-CN";
+    }
+
+    const language = browserLanguage.split("-")[0];
+
+    return translations[language] ? language : "ja";
+}
+
+const languageSelect = document.getElementById("languageSelect");
+
+languageSelect.addEventListener("change", event => {
+    applyLanguage(event.target.value);
+});
+
+applyLanguage(getInitialLanguage());
+</script>
 
 </body>
 </html>
