@@ -9,46 +9,55 @@
 </head>
 <body>
 
-
 <!-- ===== Header ===== -->
 
 <header class="header">
     <a href="index.html" class="logo">
-            <span class="logo-mark">
-                <img src="images/waterlily.svg" alt="Negitoro Server">
-            </span>
+        <span class="logo-mark">
+            <img src="images/waterlily.svg" alt="Negitoro Server">
+        </span>
 
         <span class="logo-text">
-                <strong>Negitoro Server</strong>
-                <small>OFFICIAL WEBSITE</small>
-            </span>
+            <strong>Negitoro Server</strong>
+            <small>OFFICIAL WEBSITE</small>
+        </span>
     </a>
 
     <nav>
-        <a href="servers.html">サーバー紹介</a>
-        <a href="index.html#features">特徴</a>
-        <a href="index.html#join">参加方法</a>
-        <a href="index.html#news">お知らせ</a>
-        <a href="guide.html">ガイド</a>
+        <a href="servers.html" data-i18n="nav_servers">サーバー紹介</a>
+        <a href="index.html#features" data-i18n="nav_features">特徴</a>
+        <a href="index.html#join" data-i18n="nav_join">参加方法</a>
+        <a href="index.html#news" data-i18n="nav_news">お知らせ</a>
+        <a href="guide.html" data-i18n="nav_guide">ガイド</a>
         <a href="faq.html">FAQ</a>
     </nav>
 
-    <a href="index.html#join" class="header-button">JOIN US ↗</a>
-</header>
+    <div class="header-actions">
+        <select id="languageSelect" aria-label="Language">
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="en">🇺🇸 English</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="zh-CN">🇨🇳 简体中文</option>
+            <option value="zh-TW">🇹🇼 繁體中文</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="fr">🇫🇷 Français</option>
+        </select>
 
+        <a href="index.html#join" class="header-button">JOIN US ↗</a>
+    </div>
+</header>
 
 <!-- ===== Page Title ===== -->
 
 <section class="section">
     <p class="section-label">FREQUENTLY ASKED QUESTIONS</p>
-    <h2>よくある質問</h2>
+    <h2 data-i18n="faq_title">よくある質問</h2>
 
-    <p>
+    <p data-i18n="faq_intro">
         Negitoro Serverについて、よくある質問をまとめました。<br>
         わからないことがあれば、こちらを確認してみてね！
     </p>
 </section>
-
 
 <!-- ===== FAQ List ===== -->
 
@@ -57,47 +66,47 @@
     <div class="faq-list">
 
         <div class="faq-item">
-            <h3>Q. サーバーへの参加方法は？</h3>
-            <p>
+            <h3 data-i18n="q1">Q. サーバーへの参加方法は？</h3>
+            <p data-i18n="a1">
                 トップページの「参加方法」を確認してね！
                 接続に必要な情報を掲載しているよ。
             </p>
         </div>
 
         <div class="faq-item">
-            <h3>Q. 対応しているMinecraftのエディションは？</h3>
-            <p>
+            <h3 data-i18n="q2">Q. 対応しているMinecraftのエディションは？</h3>
+            <p data-i18n="a2">
                 対応エディションやバージョンについては、
                 トップページのお知らせを確認してね！
             </p>
         </div>
 
         <div class="faq-item">
-            <h3>Q. サーバーに入れない場合は？</h3>
-            <p>
+            <h3 data-i18n="q3">Q. サーバーに入れない場合は？</h3>
+            <p data-i18n="a3">
                 Minecraftのバージョンや接続情報を確認してみてね。
                 解決しない場合は運営に相談してね！
             </p>
         </div>
 
         <div class="faq-item">
-            <h3>Q. サーバールールはどこで確認できる？</h3>
-            <p>
+            <h3 data-i18n="q4">Q. サーバールールはどこで確認できる？</h3>
+            <p data-i18n="a4">
                 ガイドページの「サーバールール」から確認できるよ！
             </p>
         </div>
 
         <div class="faq-item">
-            <h3>Q. コマンドが使えない場合は？</h3>
-            <p>
+            <h3 data-i18n="q5">Q. コマンドが使えない場合は？</h3>
+            <p data-i18n="a5">
                 ガイドページの「コマンド一覧」を確認してね。
                 使用権限が必要な場合もあるよ！
             </p>
         </div>
 
         <div class="faq-item">
-            <h3>Q. 困ったときはどうすればいい？</h3>
-            <p>
+            <h3 data-i18n="q6">Q. 困ったときはどうすればいい？</h3>
+            <p data-i18n="a6">
                 サーバー内の運営メンバーに相談してね！
             </p>
         </div>
@@ -106,40 +115,356 @@
 
 </section>
 
-
 <!-- ===== Contact ===== -->
 
 <section class="section join-section">
     <p class="section-label">NEED MORE HELP?</p>
-    <h2>解決しなかった場合</h2>
+    <h2 data-i18n="contact_title">解決しなかった場合</h2>
 
-    <p>
+    <p data-i18n="contact_description">
         ここに載っていない質問や困ったことがあれば、<br>
         サーバー運営まで相談してね！
     </p>
 </section>
 
-
 <!-- ===== Navigation ===== -->
 
 <section class="section">
-    <a href="guide.html" class="main-button">
+    <a href="guide.html" class="main-button" data-i18n="back_guide">
         ガイドに戻る
     </a>
 
     <br>
 
-    <a href="index.html" class="main-button">
+    <a href="index.html" class="main-button" data-i18n="back_home">
         トップページへ戻る
     </a>
 </section>
-
 
 <!-- ===== Footer ===== -->
 
 <footer class="footer">
     <p>© Negitoro Server. All Rights Reserved.</p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const translations = {
+
+        ja: {
+            nav_servers: "サーバー紹介",
+            nav_features: "特徴",
+            nav_join: "参加方法",
+            nav_news: "お知らせ",
+            nav_guide: "ガイド",
+
+            faq_title: "よくある質問",
+            faq_intro: "Negitoro Serverについて、よくある質問をまとめました。<br>わからないことがあれば、こちらを確認してみてね！",
+
+            q1: "Q. サーバーへの参加方法は？",
+            a1: "トップページの「参加方法」を確認してね！接続に必要な情報を掲載しているよ。",
+
+            q2: "Q. 対応しているMinecraftのエディションは？",
+            a2: "対応エディションやバージョンについては、トップページのお知らせを確認してね！",
+
+            q3: "Q. サーバーに入れない場合は？",
+            a3: "Minecraftのバージョンや接続情報を確認してみてね。解決しない場合は運営に相談してね！",
+
+            q4: "Q. サーバールールはどこで確認できる？",
+            a4: "ガイドページの「サーバールール」から確認できるよ！",
+
+            q5: "Q. コマンドが使えない場合は？",
+            a5: "ガイドページの「コマンド一覧」を確認してね。使用権限が必要な場合もあるよ！",
+
+            q6: "Q. 困ったときはどうすればいい？",
+            a6: "サーバー内の運営メンバーに相談してね！",
+
+            contact_title: "解決しなかった場合",
+            contact_description: "ここに載っていない質問や困ったことがあれば、<br>サーバー運営まで相談してね！",
+
+            back_guide: "ガイドに戻る",
+            back_home: "トップページへ戻る"
+        },
+
+        en: {
+            nav_servers: "Our Servers",
+            nav_features: "Features",
+            nav_join: "How to Join",
+            nav_news: "News",
+            nav_guide: "Guide",
+
+            faq_title: "Frequently Asked Questions",
+            faq_intro: "Here are some frequently asked questions about Negitoro Server.<br>If you have any questions, check here first!",
+
+            q1: "Q. How can I join the server?",
+            a1: "Check the \"How to Join\" section on the homepage! You'll find the information needed to connect.",
+
+            q2: "Q. Which Minecraft editions are supported?",
+            a2: "For supported editions and versions, please check the announcements on the homepage!",
+
+            q3: "Q. What should I do if I can't join the server?",
+            a3: "Check your Minecraft version and connection information. If the problem continues, contact the staff!",
+
+            q4: "Q. Where can I find the server rules?",
+            a4: "You can find them under \"Server Rules\" on the Guide page!",
+
+            q5: "Q. What if I can't use a command?",
+            a5: "Check the \"Command List\" on the Guide page. Some commands may require special permissions!",
+
+            q6: "Q. What should I do if I need help?",
+            a6: "Please ask a staff member on the server!",
+
+            contact_title: "Still Need Help?",
+            contact_description: "If you have questions or problems not listed here,<br>please contact the server staff!",
+
+            back_guide: "Back to Guide",
+            back_home: "Back to Home"
+        },
+
+        ko: {
+            nav_servers: "서버 소개",
+            nav_features: "특징",
+            nav_join: "참가 방법",
+            nav_news: "공지사항",
+            nav_guide: "가이드",
+
+            faq_title: "자주 묻는 질문",
+            faq_intro: "Negitoro Server에 대한 자주 묻는 질문을 모았습니다.<br>궁금한 점이 있다면 여기에서 확인해 보세요!",
+
+            q1: "Q. 서버에 어떻게 참가하나요?",
+            a1: "홈페이지의 '참가 방법'을 확인해 주세요! 접속에 필요한 정보가 안내되어 있습니다.",
+
+            q2: "Q. 지원하는 Minecraft 에디션은 무엇인가요?",
+            a2: "지원하는 에디션과 버전은 홈페이지의 공지사항을 확인해 주세요!",
+
+            q3: "Q. 서버에 접속할 수 없다면 어떻게 하나요?",
+            a3: "Minecraft 버전과 접속 정보를 확인해 보세요. 해결되지 않으면 운영진에게 문의해 주세요!",
+
+            q4: "Q. 서버 규칙은 어디에서 확인할 수 있나요?",
+            a4: "가이드 페이지의 '서버 규칙'에서 확인할 수 있습니다!",
+
+            q5: "Q. 명령어를 사용할 수 없다면 어떻게 하나요?",
+            a5: "가이드 페이지의 '명령어 목록'을 확인해 주세요. 일부 명령어는 권한이 필요할 수 있습니다!",
+
+            q6: "Q. 문제가 생기면 어떻게 해야 하나요?",
+            a6: "서버 내 운영진에게 문의해 주세요!",
+
+            contact_title: "문제가 해결되지 않았나요?",
+            contact_description: "여기에 없는 질문이나 문제가 있다면,<br>서버 운영진에게 문의해 주세요!",
+
+            back_guide: "가이드로 돌아가기",
+            back_home: "홈으로 돌아가기"
+        },
+
+        "zh-CN": {
+            nav_servers: "服务器介绍",
+            nav_features: "特色",
+            nav_join: "加入方法",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            faq_title: "常见问题",
+            faq_intro: "这里整理了关于 Negitoro Server 的常见问题。<br>如果有不明白的地方，请先查看这里！",
+
+            q1: "Q. 如何加入服务器？",
+            a1: "请查看首页的“加入方法”！那里有连接服务器所需的信息。",
+
+            q2: "Q. 支持哪些 Minecraft 版本和版本类型？",
+            a2: "关于支持的版本类型和版本号，请查看首页的公告！",
+
+            q3: "Q. 如果无法进入服务器怎么办？",
+            a3: "请确认 Minecraft 版本和连接信息。如果仍然无法解决，请联系管理团队！",
+
+            q4: "Q. 在哪里可以查看服务器规则？",
+            a4: "可以在指南页面的“服务器规则”中查看！",
+
+            q5: "Q. 如果无法使用指令怎么办？",
+            a5: "请查看指南页面的“指令列表”。部分指令可能需要相应权限！",
+
+            q6: "Q. 遇到问题时该怎么办？",
+            a6: "请向服务器内的管理人员咨询！",
+
+            contact_title: "问题仍未解决？",
+            contact_description: "如果有这里没有列出的问题或困难，<br>请联系服务器管理团队！",
+
+            back_guide: "返回指南",
+            back_home: "返回首页"
+        },
+
+        "zh-TW": {
+            nav_servers: "伺服器介紹",
+            nav_features: "特色",
+            nav_join: "加入方式",
+            nav_news: "公告",
+            nav_guide: "指南",
+
+            faq_title: "常見問題",
+            faq_intro: "這裡整理了關於 Negitoro Server 的常見問題。<br>如果有不明白的地方，請先查看這裡！",
+
+            q1: "Q. 如何加入伺服器？",
+            a1: "請查看首頁的「加入方式」！那裡有連線伺服器所需的資訊。",
+
+            q2: "Q. 支援哪些 Minecraft 版本和版本類型？",
+            a2: "關於支援的版本類型和版本號，請查看首頁的公告！",
+
+            q3: "Q. 如果無法進入伺服器怎麼辦？",
+            a3: "請確認 Minecraft 版本和連線資訊。如果仍然無法解決，請聯絡管理團隊！",
+
+            q4: "Q. 在哪裡可以查看伺服器規則？",
+            a4: "可以在指南頁面的「伺服器規則」中查看！",
+
+            q5: "Q. 如果無法使用指令怎麼辦？",
+            a5: "請查看指南頁面的「指令列表」。部分指令可能需要相應權限！",
+
+            q6: "Q. 遇到問題時該怎麼辦？",
+            a6: "請向伺服器內的管理人員詢問！",
+
+            contact_title: "問題仍未解決？",
+            contact_description: "如果有這裡沒有列出的問題或困難，<br>請聯絡伺服器管理團隊！",
+
+            back_guide: "返回指南",
+            back_home: "返回首頁"
+        },
+
+        de: {
+            nav_servers: "Unsere Server",
+            nav_features: "Features",
+            nav_join: "Beitreten",
+            nav_news: "Neuigkeiten",
+            nav_guide: "Anleitung",
+
+            faq_title: "Häufig gestellte Fragen",
+            faq_intro: "Hier findest du häufig gestellte Fragen zu Negitoro Server.<br>Wenn du etwas wissen möchtest, schau zuerst hier nach!",
+
+            q1: "Q. Wie kann ich dem Server beitreten?",
+            a1: "Sieh dir den Abschnitt „Beitreten“ auf der Startseite an! Dort findest du alle notwendigen Verbindungsinformationen.",
+
+            q2: "Q. Welche Minecraft-Editionen werden unterstützt?",
+            a2: "Informationen zu unterstützten Editionen und Versionen findest du in den Neuigkeiten auf der Startseite!",
+
+            q3: "Q. Was kann ich tun, wenn ich dem Server nicht beitreten kann?",
+            a3: "Überprüfe deine Minecraft-Version und die Verbindungsdaten. Wenn das Problem weiterhin besteht, wende dich an das Team!",
+
+            q4: "Q. Wo finde ich die Serverregeln?",
+            a4: "Du findest sie unter „Serverregeln“ auf der Anleitungsseite!",
+
+            q5: "Q. Was kann ich tun, wenn ein Befehl nicht funktioniert?",
+            a5: "Sieh dir die Befehlsliste auf der Anleitungsseite an. Für manche Befehle sind besondere Berechtigungen erforderlich!",
+
+            q6: "Q. Was soll ich tun, wenn ich Hilfe brauche?",
+            a6: "Wende dich an ein Teammitglied auf dem Server!",
+
+            contact_title: "Problem noch nicht gelöst?",
+            contact_description: "Wenn du weitere Fragen hast oder Hilfe benötigst,<br>wende dich bitte an das Serverteam!",
+
+            back_guide: "Zurück zur Anleitung",
+            back_home: "Zurück zur Startseite"
+        },
+
+        fr: {
+            nav_servers: "Nos serveurs",
+            nav_features: "Fonctionnalités",
+            nav_join: "Comment rejoindre",
+            nav_news: "Actualités",
+            nav_guide: "Guide",
+
+            faq_title: "Questions fréquentes",
+            faq_intro: "Voici les questions les plus fréquentes sur Negitoro Server.<br>Si tu as une question, consulte d'abord cette page !",
+
+            q1: "Q. Comment rejoindre le serveur ?",
+            a1: "Consulte la section « Comment rejoindre » sur la page d'accueil ! Tu y trouveras les informations de connexion.",
+
+            q2: "Q. Quelles éditions de Minecraft sont prises en charge ?",
+            a2: "Pour connaître les éditions et versions prises en charge, consulte les actualités sur la page d'accueil !",
+
+            q3: "Q. Que faire si je n'arrive pas à rejoindre le serveur ?",
+            a3: "Vérifie ta version de Minecraft et tes informations de connexion. Si le problème persiste, contacte l'équipe !",
+
+            q4: "Q. Où trouver les règles du serveur ?",
+            a4: "Tu peux les consulter dans la section « Règles du serveur » de la page Guide !",
+
+            q5: "Q. Que faire si une commande ne fonctionne pas ?",
+            a5: "Consulte la liste des commandes sur la page Guide. Certaines commandes nécessitent des permissions particulières !",
+
+            q6: "Q. Que faire si j'ai besoin d'aide ?",
+            a6: "Demande de l'aide à un membre de l'équipe sur le serveur !",
+
+            contact_title: "Toujours besoin d'aide ?",
+            contact_description: "Si tu as une question ou un problème qui n'est pas indiqué ici,<br>contacte l'équipe du serveur !",
+
+            back_guide: "Retour au guide",
+            back_home: "Retour à l'accueil"
+        }
+
+    };
+
+    const languageSelect = document.getElementById("languageSelect");
+
+    function getInitialLanguage() {
+        const savedLanguage = localStorage.getItem("negitoro-language");
+
+        if (savedLanguage && translations[savedLanguage]) {
+            return savedLanguage;
+        }
+
+        const browserLanguage = navigator.language;
+
+        if (browserLanguage.startsWith("zh")) {
+            return browserLanguage.includes("TW") || browserLanguage.includes("HK")
+                ? "zh-TW"
+                : "zh-CN";
+        }
+
+        if (browserLanguage.startsWith("ko")) return "ko";
+        if (browserLanguage.startsWith("de")) return "de";
+        if (browserLanguage.startsWith("fr")) return "fr";
+        if (browserLanguage.startsWith("en")) return "en";
+
+        return "ja";
+    }
+
+    function applyLanguage(language) {
+        if (!translations[language]) {
+            language = "ja";
+        }
+
+        const t = translations[language];
+
+        document.documentElement.lang = language;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+            const key = element.dataset.i18n;
+
+            if (t[key]) {
+                element.innerHTML = t[key];
+            }
+        });
+
+        const titles = {
+            ja: "よくある質問 | Negitoro Server",
+            en: "FAQ | Negitoro Server",
+            ko: "자주 묻는 질문 | Negitoro Server",
+            "zh-CN": "常见问题 | Negitoro Server",
+            "zh-TW": "常見問題 | Negitoro Server",
+            de: "Häufig gestellte Fragen | Negitoro Server",
+            fr: "Questions fréquentes | Negitoro Server"
+        };
+
+        document.title = titles[language];
+
+        localStorage.setItem("negitoro-language", language);
+        languageSelect.value = language;
+    }
+
+    applyLanguage(getInitialLanguage());
+
+    languageSelect.addEventListener("change", event => {
+        applyLanguage(event.target.value);
+    });
+
+});
+</script>
 
 </body>
 </html>
