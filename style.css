@@ -937,3 +937,39 @@ a.about-card:focus {
         justify-content: space-between;
     }
 }
+/* ========================================
+   Language Selector
+======================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#languageSelect {
+    padding: 10px 12px;
+    border: 1px solid rgba(38, 59, 80, 0.2);
+    border-radius: 8px;
+    background: #f7f1e5;
+    color: #263b50;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#languageSelect:focus {
+    outline: 2px solid #c49a52;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .header-actions {
+        gap: 6px;
+    }
+
+    #languageSelect {
+        max-width: 125px;
+        padding: 8px 6px;
+    }
+}
